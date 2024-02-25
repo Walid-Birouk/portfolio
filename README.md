@@ -57,8 +57,3 @@ npm run deploy
 Walid Birouk - [uki.walid@live.fr](mailto:uki.walid@live.fr)
 
 Project Link: [https://github.com/Walid-Birouk/portfolio](https://github.com/Walid-Birouk/portfolio)
-
-```
-
-Feel free to adjust the content to better fit your portfolio's details or personal style. This template provides a good starting point for describing your project's purpose, how to set it up locally, how to contribute, and how to get in touch with you.
-```
