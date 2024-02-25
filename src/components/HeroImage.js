@@ -1,23 +1,38 @@
-// import React from "react";
-// import { GatsbyImage } from "gatsby-plugin-image";
-
-// export default function HeroImage({ imageData }) {
-//   return (
-//     <div>
-//       <GatsbyImage image={imageData} alt="Hero" />
-//     </div>
-//   );
-// }
-
-// HeroImage.js
-import React from "react";
+import React, { useState } from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
+import Lightbox from "react-image-lightbox";
+import "react-image-lightbox/style.css";
 
 export default function HeroImage({ imageData }) {
-  if (!imageData) {
-    return <div>No Image Found</div>;
-  }
+  const [isOpen, setIsOpen] = useState(false);
+
+  const image = imageData;
+
+  const mainSrc = image ? image.images.fallback.src : "";
+
   return (
-    <GatsbyImage image={imageData} className="  mt-5 hero-img" alt="Hero" />
+    <>
+      <button
+        onClick={() => setIsOpen(true)}
+        onKeyPress={(event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            setIsOpen(true);
+          }
+        }}
+        style={{
+          background: "none",
+          border: "none",
+          padding: 0,
+          cursor: "pointer",
+        }}
+        aria-label="Open image in lightbox"
+      >
+        <GatsbyImage image={imageData} alt="Hero" className="mt-5 hero-img" />
+      </button>
+
+      {isOpen && (
+        <Lightbox mainSrc={mainSrc} onCloseRequest={() => setIsOpen(false)} />
+      )}
+    </>
   );
 }

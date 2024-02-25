@@ -41,25 +41,26 @@ export default function Header() {
           Aspiring <span className="typing-container font-bold">{text}</span>
           <span className="blink-cursor">|</span>
         </h2>
-        <p className="text-sm md:text-base">
-          Rooted in{" "}
-          <span className="text-bold typing-container">
-            Mathematics and Informatics
-          </span>{" "}
-          from Algeria, Now, I'm expanding my horizons in Belgium at Thomas
-          More, working towards another Bachelor's in{" "}
-          <span className="typing-container">Applied Computer Science</span>,
-          this time with a concentration on{" "}
-          <span className="typing-container">Artificial Intelligence</span>.
-          Data fascinates me—whether it's about managing it, understanding it,
-          visualizing it, or feeding it to the hungry AI models.
+        <div className="text-sm md:text-base">
           <p>
-            My move abroad was fueled by a strong desire to deepen my knowledge,
-            hone my skills, and take part in cutting-edge projects. I'm thrilled
-            about the opportunity to contribute to the rapidly evolving fields
-            of IT.
+            Rooted in{" "}
+            <span className="text-bold typing-container">
+              Mathematics and Informatics
+            </span>{" "}
+            from Algeria, Now, I'm expanding my horizons in Belgium at Thomas
+            More, working towards another Bachelor's in{" "}
+            <span className="typing-container">Applied Computer Science</span>,
+            this time with a concentration on{" "}
+            <span className="typing-container">Artificial Intelligence</span>.
           </p>
-        </p>
+          <p>
+            Data fascinates me—whether it's about managing it, understanding it,
+            visualizing it, or feeding it to the hungry AI models. My move
+            abroad was fueled by a strong desire to deepen my knowledge, hone my
+            skills, and take part in cutting-edge projects. I'm thrilled about
+            the opportunity to contribute to the rapidly evolving fields of IT.
+          </p>
+        </div>
       </div>
       <div className="flex justify-center items-center flex-wrap mt-6 gap-2 md:gap-5">
         <Link
