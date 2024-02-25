@@ -46,8 +46,9 @@ export const query = graphql`
             childImageSharp {
               gatsbyImageData(
                 layout: CONSTRAINED
-
                 placeholder: BLURRED
+                formats: [AUTO, WEBP]
+                quality: 90
               )
             }
           }
@@ -62,23 +63,3 @@ export const query = graphql`
     }
   }
 `;
-
-// <Link
-//   to={"/projects/" + project.frontmatter.slug}
-//   key={project.id}
-//   className="bg-gray-1400 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl  border border-gray-700 "
-// >
-//   <div className=" rounded-lg overflow-hidden">
-//     <GatsbyImage
-//       className="w-full h-48 object-contain"
-//       image={image}
-//       alt={project.frontmatter.title}
-//     />
-//     <div className="p-4 ">
-//       <h3 className="text-xl text-white mb-2 ">
-//         {project.frontmatter.title}
-//       </h3>
-//       <p className="text-gray-400">{project.frontmatter.stack}</p>
-//     </div>
-//   </div>
-// </Link>
