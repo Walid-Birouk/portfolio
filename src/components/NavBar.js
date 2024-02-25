@@ -34,9 +34,7 @@ export default function NavBar() {
           to="/"
           className="flex initials items-center space-x-2 text-xl font-bold"
         >
-          <img src={logo} alt="Logo" className="mx-2 w-6 h-6" />{" "}
-          {/* Adjust size as needed */}
-          {initials}
+          <img src={logo} alt="Logo" className="mx-2 w-6 h-6" /> {initials}
         </Link>
 
         {/* Toggle button for the mobile menu */}

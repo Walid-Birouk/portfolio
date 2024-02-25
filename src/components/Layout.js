@@ -3,7 +3,6 @@ import Navbar from "./NavBar";
 import Footer from "./Footer";
 import "../styles/global.css";
 
-// Layout component for dark mode with a gradient background
 const Layout = ({ children }) => {
   return (
     <div
