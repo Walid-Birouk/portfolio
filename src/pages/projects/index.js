@@ -44,7 +44,7 @@ export const query = graphql`
           title
           thumb {
             childImageSharp {
-              gatsbyImageData(layout: CONSTRAINED, quality: 50)
+              gatsbyImageData(layout: CONSTRAINED)
             }
           }
         }
