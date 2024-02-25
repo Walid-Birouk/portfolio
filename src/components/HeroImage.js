@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
 
 export default function HeroImage({ imageData }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const image = imageData;
+  const image = getImage(imageData);
 
   const mainSrc = image ? image.images.fallback.src : "";
 

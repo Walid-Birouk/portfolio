@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
 
 export default function ProfileSection({ profilePic, name, role }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const image = profilePic;
+  const image = getImage(profilePic);
 
   return (
     <div className="flex flex-col items-center">
