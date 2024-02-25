@@ -6,7 +6,7 @@ import Education from "../components/Education";
 import Experience from "../components/Experience";
 import CVDownload from "../components/CVDownload";
 import { graphql } from "gatsby";
-import { getImage } from "gatsby-plugin-image"; // Updated import
+import { getImage } from "gatsby-plugin-image";
 import SkillsLanguageIntrests from "../components/SkillsLanguageIntrests";
 
 export default function About({ data }) {
@@ -51,12 +51,7 @@ export const query = graphql`
   query Profile {
     file(relativePath: { eq: "profilePic.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          formats: [AUTO, WEBP]
-          quality: 90
-        )
+        gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, quality: 90)
       }
     }
   }

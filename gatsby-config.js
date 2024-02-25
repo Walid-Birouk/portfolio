@@ -2,7 +2,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  pathPrefix: "/portfolio", // Correctly placed inside the module.exports
+  pathPrefix: "/portfolio",
   siteMetadata: {
     title: "PORTFOLIO",
     author: "Walid Birouk",
@@ -15,8 +15,8 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    "gatsby-transformer-remark",
-    "gatsby-plugin-postcss",
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-postcss`,
     `gatsby-plugin-fontawesome`,
 
     {

@@ -17,9 +17,9 @@ const Layout = ({ children }) => {
       <main
         className="container flex-grow mx-auto p-4 rounded-lg shadow-lg mt-2 mb-2"
         style={{
-          backgroundColor: "rgba(255, 255, 255, 0.05)", // Very subtle transparency for a dark mode feel
-          backdropFilter: "blur(10px)", // Optional: adds a blur effect to the background container for a frosted glass look
-          color: "#FFFFFF", // Ensuring text is white for dark mode
+          backgroundColor: "rgba(255, 255, 255, 0.05)",
+          backdropFilter: "blur(10px)",
+          color: "#FFFFFF",
         }}
       >
         <div className="px-5">{children}</div>

@@ -21,7 +21,7 @@ const Footer = () => {
   return (
     <footer className="bg-transparent text-center text-sm lg:text-base p-4 ">
       <ContactLinks />
-      <p className="mt-2 text-gray-400 ">
+      <p className="mt-2 text-gray-400">
         &copy; {new Date().getFullYear()} {copyright}
       </p>
     </footer>
