@@ -8,7 +8,7 @@
 // }
 
 import React, { useState } from "react";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css"; // Import CSS for react-image-lightbox
 
@@ -16,9 +16,9 @@ const HeroImage = ({ imageData }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   // Use getImage to ensure compatibility with Gatsby's image data structure
-  const image = getImage(imageData);
+  //const image = getImage(imageData);, getImage
   // Adjust this line according to your actual data structure for direct URL access
-  const imageUrl = image?.images?.fallback?.src;
+  const imageUrl = imageData?.images?.fallback?.src;
 
   // Function to handle both click and keyboard events
   const handleOpenLightbox = (event) => {
