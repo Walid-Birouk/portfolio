@@ -37,7 +37,7 @@ module.exports = {
           1450: "#060608", // Darker than 1400
           1500: "#040406", // The darkest shade, darker than 1450
         },
-        softPink: "#ff79b0",
+        choco: "#7B3F00",
         electricBlue: "#007bff",
         cc: "#01402E",
       },

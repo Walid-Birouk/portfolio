@@ -16,11 +16,12 @@
   color: #e2e8f0; /* Consistent color for all heading levels */
   margin-top: 2rem; /* Space above headings */
   margin-bottom: 1rem; /* Space below headings */
-  text-align: left; /* Align to the left, change to center if preferred */
+  text-align: left; /* Default align to the left */
   font-weight: bold;
 }
+
 .html h1 {
-  font-size: 2.2rem; /* Larger font size for h2 */
+  font-size: 2.2rem; /* Larger font size for h1 */
   text-align: center;
 }
 
@@ -30,12 +31,36 @@
 
 .html h3 {
   font-size: 1.75rem; /* Smaller font size than h2 but larger than body text */
-
   text-align: center;
 }
+
 .html h4 {
   font-size: 1.1rem;
   text-align: left;
+}
+
+/* Media query for screens narrower than 768px */
+@media (max-width: 768px) {
+  .html h1 {
+    font-size: 1.6rem; /* Smaller font size for h1 on smaller screens */
+    text-align: left;
+  }
+
+  .html h2 {
+    font-size: 1.4rem; /* Smaller font size for h2 on smaller screens */
+  }
+
+  .html h3 {
+    font-size: 1.2rem; /* Adjusted font size for h3 on smaller screens */
+    text-align: left;
+  }
+
+  .html h4,
+  .html h5,
+  .html h6 {
+    font-size: 1.2rem; /* Adjusted font size for smaller headings on smaller screens */
+    text-align: left;
+  }
 }
 
 .html p {

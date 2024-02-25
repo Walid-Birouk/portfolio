@@ -8,8 +8,9 @@ export default function Experience() {
       <br />
       <hr />
       <br />
-      {/* Repeat the structure for work experience */}
-      <div className="grid grid-cols-2 gap-4">
+      {/* Adjusted grid for responsive layout */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {/* Each work experience item now stacks on smaller screens and displays in two columns on medium screens and up */}
         <div className="mb-4">
           <p className="font-bold">Warehouse order picker</p>
           <p className="text-gray-400 pl-2">
