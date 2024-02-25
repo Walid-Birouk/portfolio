@@ -25,7 +25,7 @@ export default function About({ data }) {
           <br />
           <ContactLinks />
           <span className="m-2"></span>
-          <CVDownload cvLink="/downloads/CV.pdf " cvLabel="CV.pdf" />
+          <CVDownload cvLink="/portfolio/downloads/CV.pdf " cvLabel="CV.pdf" />
           {/* <a href="/images/CV_Walid_Birouk.pdf" download="CV_Walid_Birouk.pdf" className="block bg-gray-900 text-white text-center mt-4 py-2 rounded hover:bg-gray-700 transition-colors" target="_blank" rel="noopener noreferrer">Download CV</a> */}
           <br />
           <hr />

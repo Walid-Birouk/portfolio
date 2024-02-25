@@ -74,7 +74,7 @@ export default function Header() {
         >
           About
         </Link>
-        <CVDownload cvLink="/downloads/CV.pdf" cvLabel="CV.pdf" />
+        <CVDownload cvLink="downloads/CV.pdf" cvLabel="CV.pdf" />
       </div>
     </div>
   );
