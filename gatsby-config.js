@@ -19,6 +19,18 @@ module.exports = {
     "gatsby-plugin-postcss",
     `gatsby-plugin-fontawesome`,
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Gatsby Site`,
+        short_name: `Gatsby`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `src/images/favicon/favicon.ico`,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `projects`,
