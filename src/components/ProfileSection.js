@@ -20,7 +20,7 @@
 // }
 
 import React, { useState } from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css"; // Import CSS for react-image-lightbox
 
@@ -28,9 +28,9 @@ const ProfileSection = ({ profilePic, name, role }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   // Use getImage to ensure compatibility with Gatsby's image data structure
-  // const image = getImage(profilePic); , getImage
+  const image = getImage(profilePic);
   // Adjust this line according to your actual data structure for direct URL access
-  const imageUrl = profilePic?.images?.fallback?.src;
+  const imageUrl = image?.images?.fallback?.src;
 
   // Function to handle both click and keyboard events
   const handleOpenLightbox = (event) => {
@@ -54,11 +54,7 @@ const ProfileSection = ({ profilePic, name, role }) => {
         style={{ cursor: "pointer" }}
         aria-label="Open profile picture in lightbox" // Provide an accessible name
       >
-        <GatsbyImage
-          image={profilePic}
-          alt="profile picture"
-          className="w-full"
-        />
+        <GatsbyImage image={image} alt="profile picture" className="w-full" />
       </div>
       {isOpen && (
         <Lightbox mainSrc={imageUrl} onCloseRequest={() => setIsOpen(false)} />
