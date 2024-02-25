@@ -18,6 +18,7 @@ module.exports = {
     "gatsby-transformer-remark",
     "gatsby-plugin-postcss",
     `gatsby-plugin-fontawesome`,
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -27,7 +28,22 @@ module.exports = {
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`,
-        icon: `src/images/favicon/favicon.ico`,
+        icon: `src/images/favicon/android-chrome-512x512.png`,
+
+        icons: [
+          {
+            src: `/android-chrome-192x192.png`,
+            sizes: `192x192`,
+            type: `image/png`,
+          },
+          {
+            src: `/android-chrome-512x512.png`,
+            sizes: `512x512`,
+            type: `image/png`,
+          },
+          // If you want to manually specify additional icons, you can do so here.
+        ],
+        include_favicon: true,
       },
     },
     {
