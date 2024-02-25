@@ -34,7 +34,7 @@ export const query = graphql`
         stack
         images {
           childImageSharp {
-            gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+            gatsbyImageData(layout: CONSTRAINED, quality: 50)
           }
         }
       }

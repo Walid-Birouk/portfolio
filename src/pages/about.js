@@ -51,7 +51,7 @@ export const query = graphql`
   query Profile {
     file(relativePath: { eq: "profilePic.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, quality: 90)
+        gatsbyImageData(layout: CONSTRAINED, quality: 50)
       }
     }
   }
