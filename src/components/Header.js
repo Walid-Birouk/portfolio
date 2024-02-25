@@ -36,12 +36,12 @@ export default function Header() {
   return (
     <div className="flex flex-col justify-between h-full">
       <div>
-        <h1 className="text-5xl pb-5 font-bold ">PORTFOLIO</h1>
-        <h2 className="text-xl pb-2 ">
+        <h1 className="text-3xl md:text-5xl pb-5 font-bold">PORTFOLIO</h1>
+        <h2 className="text-base md:text-xl pb-2">
           Aspiring <span className="typing-container font-bold">{text}</span>
           <span className="blink-cursor">|</span>
         </h2>
-        <p>
+        <p className="text-sm md:text-base">
           Rooted in{" "}
           <span className="text-bold typing-container">
             Mathematics and Informatics
@@ -52,7 +52,7 @@ export default function Header() {
           this time with a concentration on{" "}
           <span className="typing-container">Artificial Intelligence</span>.
           Data fascinates me—whether it's about managing it, understanding it,
-          visualizing it or feeding to the hungry AI models.
+          visualizing it, or feeding it to the hungry AI models.
           <p>
             My move abroad was fueled by a strong desire to deepen my knowledge,
             hone my skills, and take part in cutting-edge projects. I'm thrilled
@@ -61,22 +61,20 @@ export default function Header() {
           </p>
         </p>
       </div>
-      <div className="flex justify-center items-center   mt-6">
+      <div className="flex justify-center items-center flex-wrap mt-6 gap-2 md:gap-5">
         <Link
-          className=" px-2 text-white text-center py-2 rounded hover:text-customTeal-200 transition-colors"
+          className="px-2 text-white text-center py-2 rounded hover:text-customTeal-200 transition-colors"
           to="/projects"
         >
           Projects
         </Link>
-        <span className=" text-white px-5 lg:px-10">|</span>
         <Link
-          className=" px-2 text-white text-center py-2 rounded hover:text-customTeal-200 transition-colors"
+          className="px-2 text-white text-center py-2 rounded hover:text-customTeal-200 transition-colors"
           to="/about"
         >
           About
         </Link>
-        <span className=" text-white px-5 lg:px-10">|</span>
-        <CVDownload cvLink="/downloads/CV.pdf " cvLabel="CV.pdf" />
+        <CVDownload cvLink="/downloads/CV.pdf" cvLabel="CV.pdf" />
       </div>
     </div>
   );

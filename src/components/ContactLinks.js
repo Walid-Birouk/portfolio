@@ -19,8 +19,7 @@ export default function ContactLinks() {
           <FontAwesomeIcon icon={faLinkedin} size="2x" />
         </a>
       </span>
-      {/* Separator is hidden on small screens and shown on medium screens and up */}
-      <span className="hidden md:inline-block text-white mx-10 my-1">|</span>
+
       {/* GitHub */}
 
       <span className="hover:text-customTeal-600 ">
@@ -34,8 +33,7 @@ export default function ContactLinks() {
           <FontAwesomeIcon icon={faGithub} size="2x" />
         </a>
       </span>
-      {/* Separator is hidden on small screens and shown on medium screens and up */}
-      <span className="hidden md:inline-block text-white mx-10 my-1">|</span>
+
       {/* Email */}
       <span className="hover:text-customTeal-600 ">
         <a
