@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Source Code Pro";
+}
+.blink-cursor {
+  animation: blink-cursor 0.75s step-end infinite;
+}
+.initials {
+  text-shadow: 2px 0 10px rgba(255, 0, 0, 0.7),
+    /* Red shadow */ 0 2px 10px rgba(0, 255, 0, 0.7),
+    /* Green shadow */ -2px 0 10px rgba(0, 0, 255, 0.7); /* Blue shadow */
+}
+
+.typing-container {
+  color: #a8f0e0;
+
+  text-shadow: 2px 0 10px rgba(255, 0, 0, 0.7),
+    /* Red shadow */ 0 2px 10px rgba(0, 255, 0, 0.7),
+    /* Green shadow */ -2px 0 10px rgba(0, 0, 255, 0.7); /* Blue shadow */
+}
+
+@keyframes blink-cursor {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: inherit;
+  }
+}
+
+nav a {
+  display: inline-block;
+  font-weight: 400;
+  border-bottom: 3px solid transparent;
+}
+
+a {
+  display: inline-block;
+  font-weight: 400;
+  border-top: 3px solid transparent;
+
+  border-bottom: 3px solid;
+  border-radius: 6px;
+}
+a:hover {
+  border-color: #88e0c0;
+}
+
+nav a:hover {
+  border-color: white;
+}
+footer p {
+  color: #bbb;
+}
+.hover-parent:hover h3 {
+  color: #88e0c0; /* Custom teal color */
+}
+
+h1 {
+  text-shadow: 2px 0 10px rgba(255, 0, 0, 0.7),
+    /* Red shadow */ 0 2px 10px rgba(0, 255, 0, 0.7),
+    /* Green shadow */ -2px 0 10px rgba(0, 0, 255, 0.7); /* Blue shadow */
+}
+.hero-img {
+  border-radius: 0 50% 50% 50%;
+}

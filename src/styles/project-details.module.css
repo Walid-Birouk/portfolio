@@ -1,0 +1,81 @@
+.html {
+  font-size: 1rem; /* Standard font size for body text */
+  color: #e2e8f0; /* A lighter gray that stands out against a dark background */
+  margin-bottom: 40px; /* Space below the article */
+  line-height: 1.75; /* Increased line height for better readability */
+  max-width: 100%; /* Ensure the content does not exceed the width of its container */
+  word-wrap: break-word; /* Ensures long words do not overflow */
+}
+
+.html h1,
+.html h2,
+.html h3,
+.html h4,
+.html h5,
+.html h6 {
+  color: #e2e8f0; /* Consistent color for all heading levels */
+  margin-top: 2rem; /* Space above headings */
+  margin-bottom: 1rem; /* Space below headings */
+  text-align: left; /* Align to the left, change to center if preferred */
+  font-weight: bold;
+}
+.html h1 {
+  font-size: 2.2rem; /* Larger font size for h2 */
+  text-align: center;
+}
+
+.html h2 {
+  font-size: 2rem; /* Larger font size for h2 */
+}
+
+.html h3 {
+  font-size: 1.75rem; /* Smaller font size than h2 but larger than body text */
+
+  text-align: center;
+}
+.html h4 {
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.html p {
+  margin-bottom: 0.75rem; /* Space below paragraphs */
+}
+
+.html a {
+  color: #88e0c0; /* A distinct color for links */
+  text-decoration: none; /* Underline links for clarity */
+}
+
+.html ul {
+  list-style-type: disc; /* Bullet points for unordered lists */
+  padding-left: 1.5rem; /* Indentation for list items */
+  margin-bottom: 1rem; /* Space below the list */
+}
+.html li::marker {
+  color: #88e0c0; /* Color of the bullet points */
+}
+.html span {
+  color: #48c080;
+}
+.html ul li {
+  margin-bottom: 0.5rem; /* Space between list items */
+}
+
+.html ol {
+  list-style-type: decimal; /* Numbering for ordered lists */
+  padding-left: 1.5rem; /* Indentation for list items */
+  margin-bottom: 1rem; /* Space below the list */
+}
+
+.html ol li {
+  margin-bottom: 0.5rem; /* Space between list items */
+}
+
+.html blockquote {
+  border-left: 4px solid #63b3ed; /* A border to the left for blockquotes */
+  padding-left: 1rem; /* Padding to the left within blockquotes */
+  color: #a0aec0; /* A different color for blockquote text */
+  margin: 1rem 0; /* Space above and below blockquotes */
+  font-style: italic; /* Italicize blockquote text */
+}
