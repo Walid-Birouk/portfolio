@@ -6,12 +6,13 @@ import Education from "../components/Education";
 import Experience from "../components/Experience";
 import CVDownload from "../components/CVDownload";
 import { graphql } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
+
 import SkillsLanguageIntrests from "../components/SkillsLanguageIntrests";
 
 export default function About({ data }) {
   // console.log({data});
-  const profilePic = getImage(data.file.childImageSharp.gatsbyImageData);
+  const profilePic = data.file.childImageSharp;
+
   return (
     <Layout>
       <div className="container mx-auto flex flex-wrap py-6">

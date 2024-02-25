@@ -3,10 +3,9 @@ import Layout from "../components/Layout";
 import Header from "../components/Header";
 import HeroImage from "../components/HeroImage";
 import { graphql } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
 
 export default function Home({ data }) {
-  const image = getImage(data.file.childImageSharp.gatsbyImageData);
+  const imageData = data.file.childImageSharp;
 
   return (
     <Layout>
@@ -15,7 +14,7 @@ export default function Home({ data }) {
           <Header />
         </div>
         <div className="lg:w-1/2 w-2/3 flex  items-center justify-center ">
-          <HeroImage imageData={image} />
+          <HeroImage imageData={imageData} />
         </div>
       </div>
     </Layout>
