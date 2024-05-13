@@ -2,12 +2,14 @@ import React from "react";
 import Layout from "../components/Layout";
 import ProfileSection from "../components/ProfileSection";
 import ContactLinks from "../components/ContactLinks";
+
 import Education from "../components/Education";
 import Experience from "../components/Experience";
 import CVDownload from "../components/CVDownload";
 import { graphql } from "gatsby";
 
 import SkillsLanguageIntrests from "../components/SkillsLanguageIntrests";
+import AboutMe from "../components/AboutMe";
 
 export default function About({ data }) {
   // console.log({data});
@@ -36,11 +38,16 @@ export default function About({ data }) {
         {/* Right Section */}
         <div className="w-full md:w-2/3 px-4">
           <div>
-            <Education />
+            <AboutMe />
             <br />
             <hr />
             <br />
             <Experience />
+
+            <br />
+            <hr />
+            <br />
+            <Education />
           </div>
         </div>
       </div>

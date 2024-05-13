@@ -42,23 +42,26 @@ export default function Header() {
           <span className="blink-cursor">|</span>
         </h2>
         <div className="text-sm md:text-base">
-          <p>
-            Rooted in{" "}
+          <p className="pb-2">
+            As a recent graduate with a Bachelor’s in{" "}
             <span className="text-bold typing-container">
+              Applied Computer Science
+            </span>{" "}
+            from Thomas More in Belgium, specializing in{" "}
+            <span className="typing-container">Artificial Intelligence</span>, I
+            bring a solid foundation in{" "}
+            <span className="typing-container">
               Mathematics and Informatics
             </span>{" "}
-            from Algeria, Now, I'm expanding my horizons in Belgium at Thomas
-            More, working towards another Bachelor's in{" "}
-            <span className="typing-container">Applied Computer Science</span>,
-            this time with a concentration on{" "}
-            <span className="typing-container">Artificial Intelligence</span>.
+            from my studies in Algeria.{" "}
           </p>
           <p>
             Data fascinates me—whether it's about managing it, understanding it,
-            visualizing it, or feeding it to the hungry AI models. My move
-            abroad was fueled by a strong desire to deepen my knowledge, hone my
-            skills, and take part in cutting-edge projects. I'm thrilled about
-            the opportunity to contribute to the rapidly evolving fields of IT.
+            visualizing it, or utilizing it to power advanced AI models. My
+            international education was driven by a strong desire to deepen my
+            expertise, refine my skills, and engage in groundbreaking projects.
+            I am now eager to contribute my knowledge and innovative perspective
+            to the dynamic fields of IT and data science.
           </p>
         </div>
       </div>

@@ -69,3 +69,15 @@ h1 {
 .hero-img {
   border-radius: 0 50% 50% 50%;
 }
+ul.custom-teal-bullets {
+  list-style: none; /* Removes default list styling */
+  padding-left: 0; /* Optional: removes default padding if needed */
+}
+
+ul.custom-teal-bullets li::before {
+  content: "•"; /* Unicode character for the bullet */
+  color: #88e0c0; /* Custom teal color */
+  display: inline-block;
+  margin-right: 10px; /* Adjust space between the bullet and text */
+  font-size: 20px; /* Adjust bullet size as needed */
+}
