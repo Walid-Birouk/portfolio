@@ -3,10 +3,10 @@ title: Autonomous Driving Car (Unity)
 stack: TensorFlow & Flask & Open CV
 slug: sdc-cnn-model
 date: 2024-01-05T00:00:00+00:00
-thumb: ../images/thumbs/sdc0.webp
+thumb: ../images/thumbs/sdc0.png
 
 images:
-  - ../images/carousel/sdc0.webp
+  - ../images/carousel/sdc0.png
   - ../images/carousel/sdc1.png
   - ../images/carousel/sdc2.png
   - ../images/carousel/sdc3.png

@@ -3,9 +3,9 @@ title: Time Series, Office Occupancy Prediction
 stack: Facebook Prophet & Python
 slug: office-occupancy-tracker
 date: 2023-12-13T00:00:00+00:00
-thumb: ../images/thumbs/fb0.webp
+thumb: ../images/thumbs/fb0.png
 images:
-  - ../images/carousel/fb0.webp
+  - ../images/carousel/fb0.png
   - ../images/carousel/fb.jpg
   - ../images/carousel/fb2.jpg
   - ../images/carousel/fb1.jpg

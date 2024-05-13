@@ -3,10 +3,10 @@ title: Crop Production EDA & ML
 stack: Pandas & Numpy & Seaborn
 slug: crop-stats-model
 date: 2023-12-09T00:00:00+00:00
-thumb: ../images/thumbs/crop0.webp
+thumb: ../images/thumbs/crop0.png
 
 images:
-  - ../images/carousel/crop0.webp
+  - ../images/carousel/crop0.png
   - ../images/carousel/crop1.png
   - ../images/carousel/crop2.png
   - ../images/carousel/crop3.png

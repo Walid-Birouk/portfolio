@@ -4,11 +4,11 @@ stack: FastAI & TensorFlow
 slug: f1-cv-model
 date: 2023-12-12T00:00:00+00:00
 
-thumb: ../images/thumbs/f1.webp
+thumb: ../images/thumbs/f1.png
 
 images:
   - ../images/carousel/streamlit2.png
-  - ../images/carousel/f1.webp
+  - ../images/carousel/f1.png
   - ../images/carousel/streamlit1.png
 
   - ../images/carousel/streamlit2.png

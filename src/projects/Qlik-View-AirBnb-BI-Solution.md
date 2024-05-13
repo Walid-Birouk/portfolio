@@ -3,7 +3,7 @@ title: AirBnb BI Dashboard
 stack: Qlik View & JavaScript
 slug: Qlik-View-AirBnb-BI-Solution
 date: 2023-12-11T00:00:00+00:00
-thumb: ../images/thumbs/airbnb.webp
+thumb: ../images/thumbs/airbnb.png
 
 images:
   - ../images/carousel/d1.png

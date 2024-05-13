@@ -3,7 +3,7 @@ title: Urinary System Disease Diagnosis
 stack: Streamlit & SVM & KNN
 slug: urinary-system-disease
 date: 2023-12-10T00:00:00+00:00
-thumb: ../images/thumbs/u0.webp
+thumb: ../images/thumbs/u0.png
 images:
   - ../images/carousel/u1.png
   - ../images/carousel/u2.png

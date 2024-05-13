@@ -3,7 +3,7 @@ title: Busy Barometer App
 stack: React & Firebase & Flask API
 slug: busy-barometer-app
 date: 2023-12-07T00:00:00+00:00
-thumb: ../images/thumbs/g0.webp
+thumb: ../images/thumbs/g0.png
 images:
   - ../images/carousel/g1.png
   - ../images/carousel/g2.png

@@ -3,10 +3,10 @@ title: The Titanic Dataset (EDA & ML)
 stack: Pandas & Numpy & Matplot
 slug: titanic-dataset-model
 date: 2023-12-08T00:00:00+00:00
-thumb: ../images/thumbs/titanic0.webp
+thumb: ../images/thumbs/titanic0.png
 
 images:
-  - ../images/carousel/titanic0.webp
+  - ../images/carousel/titanic0.png
   - ../images/carousel/titanic1.png
   - ../images/carousel/titanic4.png
   - ../images/carousel/titanic2.png
