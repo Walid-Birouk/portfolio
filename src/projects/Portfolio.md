@@ -11,12 +11,11 @@ images:
   - ../images/carousel/portfolio2.png
 ---
 
-## Comprehensive Guide to Autonomous Driving using CNN and OpenCV
-
-- **GitHub Repository**: [https://github.com/Walid-Birouk/portfolio](https://github.com/Walid-Birouk/portfolio)
-- **Live Site**: [https://walid-birouk.github.io/portfolio](https://walid-birouk.github.io/portfolio)
-
 ## Walid Birouk's Portfolio Website
+
+#### GitHub Repository: [https://github.com/Walid-Birouk/portfolio](https://github.com/Walid-Birouk/portfolio)
+
+#### Live Site: [https://walid-birouk.github.io/portfolio](https://walid-birouk.github.io/portfolio)
 
 ## Overview
 
