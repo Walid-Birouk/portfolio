@@ -1,6 +1,10 @@
 import React from "react";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-export default function Education() {
+export default function Education({ logos }) {
+  const thomasMoreLogo = getImage(logos.thomasMore);
+  const universiteDeJijelLogo = getImage(logos.universiteDeJijel);
+
   return (
     <div>
       <h1 className="text-3xl font-semibold mt-4 mb-2">
@@ -10,10 +14,17 @@ export default function Education() {
       <hr />
       <br />
       <div className="mb-4">
-        <h2 className="text-xl font-bold">
-          Bachelor's degree in Applied Computer Science (Artificial
-          Intelligence)
-        </h2>
+        <div className="flex items-center mb-2">
+          <GatsbyImage
+            image={thomasMoreLogo}
+            alt="Thomas More Hogeschool Logo"
+            className="w-8 h-8 mr-3"
+          />
+          <h2 className="text-xl font-bold">
+            Bachelor's degree in Applied Computer Science (Artificial
+            Intelligence)
+          </h2>
+        </div>
         <p className="text-customTeal pl-2">
           <em>Thomas More Hogeschool [ 2021 - 2024 ] (English Course)</em>
         </p>
@@ -39,9 +50,17 @@ export default function Education() {
       <hr />
       <br />
       <div className="mb-4">
-        <h2 className="text-xl font-bold">
-          Bachelor's degree in Mathematics and Informatics (Sofware devolepment){" "}
-        </h2>
+        <div className="flex items-center mb-2">
+          <GatsbyImage
+            image={universiteDeJijelLogo}
+            alt="Université de Jijel Logo"
+            className="w-8 h-8 mr-3"
+          />
+          <h2 className="text-xl font-bold">
+            Bachelor's degree in Mathematics and Informatics (Software
+            Development)
+          </h2>
+        </div>
         <p className="text-customTeal pl-2">
           <em>Université de Jijel [ 2018 - 2021 ] (French Course)</em>
         </p>
@@ -55,7 +74,6 @@ export default function Education() {
           <li>Computer algorithms and programming</li>
           <li>Calculus</li>
           <li>Algebra</li>
-
           <li>Web design (HTML, CSS, SASS, JS)</li>
         </ul>
         <ul className="list-disc pl-5 custom-teal-bullets">

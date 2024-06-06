@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
       <Navbar />
 
       <main
-        className="container flex-grow mx-auto p-4 rounded-lg shadow-lg mt-2 mb-2"
+        className="container flex-grow mx-auto p-4 rounded-lg shadow-lg mt-5 mb-2"
         style={{
           backgroundColor: "rgba(255, 255, 255, 0.05)",
           backdropFilter: "blur(10px)",

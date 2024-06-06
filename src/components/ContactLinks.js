@@ -11,7 +11,7 @@ export default function ContactLinks() {
       <span className="hover:text-customTeal-600 ">
         <a
           href="https://www.linkedin.com/in/walid-birouk-571b70203/"
-          className="mx-1 md:mx-2 my-1  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl"
+          className="mx-5 md:mx-2 my-1  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
@@ -25,7 +25,7 @@ export default function ContactLinks() {
       <span className="hover:text-customTeal-600 ">
         <a
           href="https://github.com/Walid-Birouk"
-          className="mx-1 md:mx-2 my-1 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl "
+          className="mx-5 md:mx-2 my-1 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl "
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
@@ -38,7 +38,7 @@ export default function ContactLinks() {
       <span className="hover:text-customTeal-600 ">
         <a
           href="mailto:uki.walid@live.fr"
-          className="mx-1 md:mx-2 my-1 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl"
+          className="mx-5 md:mx-2 my-1 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Email"

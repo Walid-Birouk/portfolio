@@ -1,10 +1,8 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import ContactLinks from "./ContactLinks"; // Import the ContactLinks component
+import ContactLinks from "./ContactLinks";
 
-// Footer component
 const Footer = () => {
-  // Query for site metadata, including copyright information
   const data = useStaticQuery(graphql`
     query CopyrightInfo {
       site {
@@ -15,7 +13,6 @@ const Footer = () => {
     }
   `);
 
-  // Destructuring the copyright data from the query result
   const { copyright } = data.site.siteMetadata;
 
   return (

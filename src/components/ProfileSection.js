@@ -6,7 +6,7 @@ import "react-image-lightbox/style.css";
 const ProfileSection = ({ profilePic, name, role }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const image = getImage(profilePic.gatsbyImageData);
+  const image = getImage(profilePic);
   const imageUrl = image?.images?.fallback?.src;
 
   const handleOpenLightbox = (event) => {
@@ -35,7 +35,7 @@ const ProfileSection = ({ profilePic, name, role }) => {
         <Lightbox mainSrc={imageUrl} onCloseRequest={() => setIsOpen(false)} />
       )}
       <h2 className="text-2xl text-center font-semibold mt-4">{name}</h2>
-      <h3 className="text-xl text-center text-gray-600">{role}</h3>
+      <h3 className="text-xl text-center text-customTeal">{role}</h3>
     </div>
   );
 };

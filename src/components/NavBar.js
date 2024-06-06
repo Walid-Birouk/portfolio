@@ -26,7 +26,7 @@ export default function NavBar() {
       style={{
         background: "linear-gradient(to right, #0A0A0B, #202124)",
       }}
-      className="p-2 mb-2 text-white relative z-10 top-0 w-full sticky"
+      className="p-2  text-white relative z-10 top-0 w-full sticky"
     >
       <div className="container mx-auto flex justify-between items-center">
         {/* Link to home with site title */}
