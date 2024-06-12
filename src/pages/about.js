@@ -51,11 +51,9 @@ export default function About({ data }) {
             <AboutMe />
             <br />
             <hr />
-            <br />
             <Experience logos={logos} />
             <br />
             <hr />
-            <br />
             <Education logos={logos} />
           </div>
         </div>

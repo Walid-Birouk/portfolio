@@ -3,7 +3,7 @@ import React from "react";
 export default function AboutMe() {
   return (
     <div className="mt-4">
-      <h1 className="text-3xl font-semibold mb-4">About Me</h1>
+      <h1 className="text-3xl font-semibold mb-4">ABOUT ME</h1>
       <hr />
       <div className="mt-4 mb-4 space-y-4">
         <p>

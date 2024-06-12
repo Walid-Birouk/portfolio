@@ -10,8 +10,8 @@ export default function Projects({ data }) {
   return (
     <Layout>
       <div className="container mx-auto px-4 py-12">
-        <h2 className="text-4xl text-center text-white mb-8">Portfolio</h2>
-        <h3 className="text-2xl text-center text-gray-400 mb-12">
+        <h1 className="text-4xl text-center text-white mb-8">PORTFOLIO</h1>
+        <h3 className="text-2xl text-center text-gray-400 mb-12 typing-container">
           Projects & Works
         </h3>
 

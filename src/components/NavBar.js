@@ -62,7 +62,13 @@ export default function NavBar() {
             About
           </Link>
           <Link to="/projects" className="px-4 py-2 hover:text-customTeal-200">
-            Portfolio Projects
+            Projects
+          </Link>
+          <Link
+            to="/projects/data-observability-internship/"
+            className="px-4 py-2 hover:text-customTeal-200"
+          >
+            Internship
           </Link>
         </div>
       </div>

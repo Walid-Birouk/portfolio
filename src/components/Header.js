@@ -46,32 +46,37 @@ export default function Header() {
               Applied Computer Science
             </span>{" "}
             from Thomas More in Belgium, specializing in{" "}
-            <span className="typing-container">Artificial Intelligence</span>,
-            with a solid foundation in{" "}
+            <span className="typing-container">Artificial Intelligence</span>.
+            My solid foundation in{" "}
             <span className="typing-container">
               Mathematics and Informatics
             </span>{" "}
-            from my studies in Algeria. My international education has equipped
-            me with diverse skills and a passion for data.
+            from my studies in Algeria has equipped me with diverse skills and a
+            deep curiosity about the world of data.
           </p>
           <p className="pb-2">
             During my internship at{" "}
-            <span className="typing-container">Algorhythm</span>, I conducted an
-            in-depth study of{" "}
-            <span className="typing-container">Data Observability</span> tools,
-            developed a Dockerized data stack pipeline, and implemented a Proof
-            of Concept using OpenMetadata. This experience enhanced my expertise
-            in data engineering, data quality, monitoring, and governance.
+            <span className="typing-container">Algorhythm</span>, I had the
+            opportunity to dive deep into{" "}
+            <span className="typing-container">Data Observability</span> tools.
+            I developed a Dockerized ETL pipeline and implemented a Proof of
+            Concept using OpenMetadata. This experience significantly enhanced
+            my knowledge in data engineering, data quality, monitoring, and
+            governance.
           </p>
           <p className="pb-2">
-            I am fascinated by data—whether managing, understanding,
-            visualizing, or utilizing it to power AI models. Driven by a desire
-            to deepen my expertise and engage in innovative projects, I am eager
-            to contribute to the fields of IT and data science.
+            I am passionate about all aspects of data, from managing and
+            understanding it, to visualizing and using it to power AI models.
+            This passion drives me to continuously learn and explore new
+            technologies and methodologies. I am always eager to take on new
+            challenges and contribute innovative solutions to the dynamic fields
+            of IT and data science.
           </p>
           <p className="pb-2">
             Explore my portfolio to see my work, including my internship
-            project, other projects, and my professional journey.
+            project, other projects, and my professional journey. I am excited
+            to share my experiences and look forward to connecting with{" "}
+            like-minded professionals.
           </p>
         </div>
       </div>

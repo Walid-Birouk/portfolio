@@ -16,9 +16,9 @@ const Footer = () => {
   const { copyright } = data.site.siteMetadata;
 
   return (
-    <footer className="bg-transparent text-center text-sm lg:text-base p-4 ">
+    <footer className="bg-transparent text-center text-sm lg:text-base pb-0 ">
       <ContactLinks />
-      <p className="mt-2 text-gray-400">
+      <p className="mt-1 text-gray-400">
         &copy; {new Date().getFullYear()} {copyright}
       </p>
     </footer>
