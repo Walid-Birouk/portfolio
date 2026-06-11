@@ -12,7 +12,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "deploy": "astro build && gh-pages -d dist"
+    "deploy": "astro build && gh-pages -d dist --dotfiles"
   },
   "dependencies": {
     "@astrojs/react": "^3.6.0",
