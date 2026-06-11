@@ -60,7 +60,7 @@ typings/
 dist/
 .astro/
 .cache/
-public/
+public/~partytown/
 
 # Mac files
 .DS_Store
