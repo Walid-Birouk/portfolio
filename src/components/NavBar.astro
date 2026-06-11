@@ -1,0 +1,101 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const pathname = Astro.url.pathname;
+
+const links = [
+  { label: 'Home', path: '/' },
+  { label: 'About', path: '/about' },
+  { label: 'Projects', path: '/projects' },
+  { label: 'Internship', path: '/projects/data-observability-internship' },
+];
+
+function isActive(path: string): boolean {
+  const full = base + path;
+  if (path === '/') return pathname === full || pathname === base || pathname === base + '/';
+  return pathname.startsWith(full);
+}
+---
+
+<nav class="sticky top-0 z-50 bg-[#0f0f0f] border-b border-subtle">
+  <div class="container mx-auto max-w-6xl px-4 h-14 flex items-center justify-between">
+    <a href={`${base}/`} class="font-mono font-bold text-lg text-accent hover:text-teal-300 transition flex items-center gap-2">
+      <img src={`${base}/logo.svg`} alt="" class="w-5 h-5" />
+      W.B.
+    </a>
+
+    <!-- Desktop nav -->
+    <div class="hidden md:flex items-center gap-6 text-sm">
+      {links.map(({ label, path }) => (
+        <a
+          href={`${base}${path}`}
+          class={`font-mono transition border-b-2 pb-0.5 ${
+            isActive(path)
+              ? 'text-accent border-accent'
+              : 'text-[#e5e5e5] border-transparent hover:text-accent hover:border-accent/50'
+          }`}
+        >
+          {label}
+        </a>
+      ))}
+      <a
+        href={`${base}/downloads/CV.pdf`}
+        download="CV_Walid_Birouk.pdf"
+        class="font-mono text-accent border border-accent/40 px-3 py-1 rounded hover:bg-accent/10 transition text-xs"
+      >
+        CV ↓
+      </a>
+    </div>
+
+    <!-- Mobile hamburger -->
+    <button id="menu-btn" class="md:hidden text-[#e5e5e5] p-2" aria-label="Toggle menu">
+      <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-[#0f0f0f] border-t border-subtle px-4 pb-4">
+    {links.map(({ label, path }) => (
+      <a
+        href={`${base}${path}`}
+        class={`block py-2 font-mono text-sm border-b border-subtle last:border-0 ${
+          isActive(path) ? 'text-accent' : 'text-[#e5e5e5]'
+        }`}
+      >
+        {label}
+      </a>
+    ))}
+    <a
+      href={`${base}/downloads/CV.pdf`}
+      download="CV_Walid_Birouk.pdf"
+      class="block py-2 font-mono text-sm text-accent"
+    >
+      CV ↓
+    </a>
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('icon-open');
+  const iconClose = document.getElementById('icon-close');
+
+  btn?.addEventListener('click', () => {
+    const isHidden = menu?.classList.toggle('hidden');
+    iconOpen?.classList.toggle('hidden', !isHidden);
+    iconClose?.classList.toggle('hidden', isHidden ?? true);
+  });
+
+  menu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden');
+      iconOpen?.classList.remove('hidden');
+      iconClose?.classList.add('hidden');
+    });
+  });
+</script>

@@ -1,0 +1,74 @@
+---
+import { Image } from 'astro:assets';
+import { AcademicCapIcon } from '@heroicons/react/24/solid';
+import thomasMoreLogo from '../images/logo/thomasMore.png';
+import universiteDeJijelLogo from '../images/logo/universiteDeJijel.png';
+---
+
+<div>
+  <h1 class="text-3xl font-mono font-semibold mt-4 mb-4">EDUCATION</h1>
+  <hr class="border-subtle mb-6" />
+
+  <!-- EPSI -->
+  <div class="mb-6">
+    <div class="flex items-center gap-3 mb-2">
+      <div class="w-8 h-8 flex-shrink-0 flex items-center justify-center">
+        <AcademicCapIcon className="w-7 h-7 text-accent" />
+      </div>
+      <h2 class="text-lg font-mono font-bold">Master's — Expert Systems (AI)</h2>
+    </div>
+    <p class="text-accent text-sm pl-11">EPSI France &nbsp;·&nbsp; 2025 – present</p>
+  </div>
+
+  <hr class="border-subtle mb-6" />
+
+  <!-- Thomas More -->
+  <div class="mb-4">
+    <div class="flex items-center gap-3 mb-2">
+      <Image src={thomasMoreLogo} alt="Thomas More" width={32} height={32} class="w-8 h-8 flex-shrink-0" />
+      <h2 class="text-lg font-mono font-bold">Bachelor's — Applied Computer Science (AI)</h2>
+    </div>
+    <p class="text-accent text-sm pl-11">Thomas More Hogeschool &nbsp;·&nbsp; 2021 – 2024 &nbsp;·&nbsp; Geel, Belgium</p>
+  </div>
+  <div class="pl-11 mb-6">
+    <p class="text-muted text-xs font-mono mb-2">Relevant coursework</p>
+    <div class="grid grid-cols-2 gap-x-4 text-sm text-[#d4d4d4]">
+      <ul class="teal-bullets space-y-1">
+        <li>Data Engineering</li>
+        <li>Big Data</li>
+        <li>Machine Learning</li>
+        <li>Business Intelligence</li>
+      </ul>
+      <ul class="teal-bullets space-y-1">
+        <li>Data Analysis with SQL</li>
+        <li>AI Project</li>
+        <li>Full Stack (Laravel, Spring Boot)</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="border-subtle mb-6" />
+
+  <!-- Jijel -->
+  <div class="mb-4">
+    <div class="flex items-center gap-3 mb-2">
+      <Image src={universiteDeJijelLogo} alt="Université de Jijel" width={32} height={32} class="w-8 h-8 flex-shrink-0" />
+      <h2 class="text-lg font-mono font-bold">Bachelor's — Mathematics & Informatics</h2>
+    </div>
+    <p class="text-accent text-sm pl-11">Université de Jijel &nbsp;·&nbsp; 2018 – 2021 &nbsp;·&nbsp; Algeria</p>
+  </div>
+  <div class="pl-11">
+    <p class="text-muted text-xs font-mono mb-2">Relevant coursework</p>
+    <div class="grid grid-cols-2 gap-x-4 text-sm text-[#d4d4d4]">
+      <ul class="teal-bullets space-y-1">
+        <li>Algorithms & Programming</li>
+        <li>Calculus & Algebra</li>
+        <li>Web Design (HTML, CSS, JS)</li>
+      </ul>
+      <ul class="teal-bullets space-y-1">
+        <li>Java, C, C#</li>
+        <li>PHP & Python</li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+---
+interface Props {
+  fileLink: string;
+  fileLabel: string;
+  label: string;
+}
+
+const { fileLink, fileLabel, label } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<div class="text-center">
+  <a
+    href={`${base}/${fileLink}`}
+    download={fileLabel}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="font-mono text-sm text-accent border border-accent/40 px-3 py-1.5 rounded hover:bg-accent/10 transition whitespace-nowrap"
+  >
+    {label} ↓
+  </a>
+</div>

@@ -1,0 +1,50 @@
+---
+import { Image } from 'astro:assets';
+import algorhythmLogo from '../images/logo/algorhythm.png';
+import algerieTelecomLogo from '../images/logo/algerieTelecom.png';
+---
+
+<div>
+  <h1 class="text-3xl font-mono font-semibold mt-4 mb-6">WORK EXPERIENCE</h1>
+  <hr class="border-subtle mb-6" />
+
+  <!-- Algorhythm -->
+  <div class="mb-10">
+    <div class="flex items-center mb-2 gap-3">
+      <Image src={algorhythmLogo} alt="Algorhythm" width={32} height={32} class="w-8 h-8 flex-shrink-0" />
+      <h2 class="text-xl font-mono font-bold">Data Engineering Intern — Algorhythm</h2>
+    </div>
+    <p class="text-accent text-sm">February 2024 – May 2024</p>
+    <p class="text-accent text-sm mb-2">Turnhout, Belgium</p>
+    <p class="text-muted text-sm mb-3">Specialized consultancy in Modern Data Stack and AI solutions.</p>
+    <ul class="teal-bullets space-y-1 text-[#d4d4d4] text-sm mb-3">
+      <li>Set up a local Data Lakehouse environment via Docker for internal experimentation and tool evaluation.</li>
+      <li>Built ELT pipelines structured around a medallion architecture (Bronze / Silver / Gold).</li>
+      <li>Modeled and transformed data with dbt — uniqueness, not null, and relation tests across 20+ models.</li>
+      <li>Orchestrated workflows with Apache Airflow.</li>
+      <li>Conducted a comparative study of Data Observability tools (internal report).</li>
+      <li>Documented technical findings and presented results to stakeholders.</li>
+    </ul>
+    <p class="text-muted text-xs font-mono">
+      <span class="text-[#d4d4d4]">Stack:</span> Spark · Airflow · dbt · PostgreSQL · Docker · Python · SQL
+    </p>
+  </div>
+
+  <!-- Algérie Télécom -->
+  <div class="mb-4">
+    <div class="flex items-center mb-2 gap-3">
+      <Image src={algerieTelecomLogo} alt="Algérie Télécom" width={32} height={32} class="w-8 h-8 flex-shrink-0" />
+      <h2 class="text-xl font-mono font-bold">Software Developer Intern — Algérie Télécom</h2>
+    </div>
+    <p class="text-accent text-sm">March 2021 – June 2021</p>
+    <p class="text-accent text-sm mb-3">Jijel, Algeria</p>
+    <ul class="teal-bullets space-y-1 text-[#d4d4d4] text-sm mb-3">
+      <li>Developed an online appointment booking system.</li>
+      <li>Optimized SQL queries — improved application performance by ~30%.</li>
+      <li>Partial redesign of the user interface.</li>
+    </ul>
+    <p class="text-muted text-xs font-mono">
+      <span class="text-[#d4d4d4]">Stack:</span> Laravel · PHP · JavaScript · MySQL
+    </p>
+  </div>
+</div>

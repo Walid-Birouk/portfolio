@@ -1,0 +1,33 @@
+---
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+---
+
+<div class="flex justify-center items-center gap-6">
+  <a
+    href="https://www.linkedin.com/in/walid-birouk-571b70203/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="LinkedIn"
+    class="text-muted hover:text-accent transition"
+  >
+    <FontAwesomeIcon icon={faLinkedin} className="text-2xl" />
+  </a>
+  <a
+    href="https://github.com/Walid-Birouk"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="GitHub"
+    class="text-muted hover:text-accent transition"
+  >
+    <FontAwesomeIcon icon={faGithub} className="text-2xl" />
+  </a>
+  <a
+    href="mailto:walid.birouk@outlook.com"
+    aria-label="Email"
+    class="text-muted hover:text-accent transition"
+  >
+    <FontAwesomeIcon icon={faEnvelope} className="text-2xl" />
+  </a>
+</div>

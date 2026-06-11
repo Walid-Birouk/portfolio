@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header';
+import { Image } from 'astro:assets';
+import heroImg from '../images/hero.png';
+---
+
+<Layout title="Walid Birouk — Data Engineer">
+  <div class="flex flex-col lg:flex-row lg:justify-between items-center min-h-[80vh] gap-8">
+    <div class="lg:w-1/2 w-full flex items-center">
+      <Header client:load />
+    </div>
+    <div class="lg:w-1/2 w-2/3 flex items-center justify-center">
+      <Image
+        src={heroImg}
+        alt="Hero"
+        class="hero-img w-full max-w-md"
+        loading="eager"
+      />
+    </div>
+  </div>
+</Layout>
