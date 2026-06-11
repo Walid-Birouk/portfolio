@@ -83,7 +83,7 @@ export default function Header() {
           About
         </a>
         <a
-          href={`${base}/downloads/CV.pdf`}
+          href={`${base}/downloads/CV_WB.pdf`}
           download="CV_Walid_Birouk.pdf"
           className="font-mono text-sm px-4 py-2 bg-accent/10 border border-accent rounded text-accent hover:bg-accent/20 transition"
         >
