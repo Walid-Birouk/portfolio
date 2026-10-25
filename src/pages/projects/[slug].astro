@@ -13,19 +13,47 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-const { title, stack, images } = entry.data;
+const { title, stack, images, description, repoUrl, repoLabel, liveUrl } = entry.data;
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const imageUrls = images?.map((f: string) => `${base}/images/carousel/${f}`) ?? [];
 ---
 
-<Layout title={`${title} — Walid Birouk`}>
-  <div class="max-w-4xl mx-auto py-8">
-    <h1 class="text-4xl font-mono text-center mb-3">{title}</h1>
-    <p class="text-center text-muted mb-10">{stack}</p>
+<Layout title={`${title} | Walid Birouk`} description={description}>
+  <div class="pt-4">
+    <h1 class="font-display font-bold text-[clamp(2.2rem,5vw,3.5rem)] leading-tight text-fg max-w-[40rem]">{title}</h1>
+    <p class="mt-3 text-muted">{stack.split(' & ').join(', ')}</p>
+
+    {(repoUrl || repoLabel || liveUrl) && (
+      <p class="mt-5 text-sm flex items-center gap-4 flex-wrap">
+        {liveUrl && (
+          <a
+            href={liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-primary"
+          >
+            Visit the live store
+          </a>
+        )}
+        {repoUrl && (
+          <a
+            href={repoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-quiet"
+          >
+            View on GitHub
+          </a>
+        )}
+        {repoLabel && <span class="text-muted">{repoLabel}</span>}
+      </p>
+    )}
 
     {imageUrls.length > 0 && (
-      <ImageCarousel images={imageUrls} client:load />
+      <div class="mt-10">
+        <ImageCarousel images={imageUrls} client:load />
+      </div>
     )}
 
     <article class="prose-dark">

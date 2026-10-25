@@ -1,0 +1,42 @@
+walidbirouk.com
+
+# ---------------------------------------------------------------------------
+# This file is deliberately NOT the live CNAME, and it is deliberately NOT in
+# public/. Astro copies public/ into dist/, and `npm run deploy` publishes dist/
+# to the gh-pages branch root — which is exactly where GitHub Pages reads CNAME
+# from. Committing a CNAME for a domain you do not yet own would point Pages at
+# a dead domain and take the current site down until it was removed.
+#
+# Activation checklist, in this order:
+#
+#   1. Buy the domain (walidbirouk.com above is a suggestion — replace it
+#      if you buy something else).
+#
+#   2. Set DNS at the registrar:
+#        A     @   185.199.108.153
+#        A     @   185.199.109.153
+#        A     @   185.199.110.153
+#        A     @   185.199.111.153
+#        CNAME www walid-birouk.github.io.
+#
+#   3. Wait for DNS to resolve, then move this file to public/CNAME containing
+#      the bare domain and nothing else — no comments, GitHub Pages does not
+#      parse them.
+#
+#   4. Remove `base: '/portfolio'` from astro.config.mjs. A custom domain serves
+#      from the root, so the base path must go or every asset 404s.
+#
+#   5. Re-check everything built from BASE_URL once base is gone:
+#        - src/layouts/Layout.astro       canonical, og:url, og:image, favicons
+#        - src/pages/sitemap.xml.ts       SITE constant and the base join
+#        - public/robots.txt              the Sitemap: line is hardcoded
+#        - src/pages/index.astro          `site` constant in the JSON-LD
+#        - src/components/NavBar.astro    nav links and the CV download
+#        - src/components/Header.tsx      hero buttons and the Ghazeline link
+#        - src/components/ProjectCard.astro, ScreenshotGallery.astro
+#        - src/pages/projects/[slug].astro carousel image URLs
+#      Then run `npm run build` and re-run the link check.
+#
+#   6. Enable "Enforce HTTPS" in the repository's Pages settings once the
+#      certificate has been issued.
+# ---------------------------------------------------------------------------

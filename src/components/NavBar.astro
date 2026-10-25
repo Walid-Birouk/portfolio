@@ -6,7 +6,6 @@ const links = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },
   { label: 'Projects', path: '/projects' },
-  { label: 'Internship', path: '/projects/data-observability-internship' },
 ];
 
 function isActive(path: string): boolean {
@@ -16,70 +15,87 @@ function isActive(path: string): boolean {
 }
 ---
 
-<nav class="sticky top-0 z-50 bg-[#0f0f0f] border-b border-subtle">
-  <div class="container mx-auto max-w-6xl px-4 h-14 flex items-center justify-between">
-    <a href={`${base}/`} class="font-mono font-bold text-lg text-accent hover:text-teal-300 transition flex items-center gap-2">
-      <img src={`${base}/logo.svg`} alt="" class="w-5 h-5" />
-      W.B.
+<nav class="sticky top-0 z-50 bg-bg border-b border-subtle">
+  <div class="mx-auto max-w-5xl px-5 sm:px-8 h-16 flex items-center justify-between">
+    <a href={`${base}/`} class="font-display font-bold text-lg tracking-tight text-fg hover:text-accent transition">
+      Walid Birouk
     </a>
 
     <!-- Desktop nav -->
-    <div class="hidden md:flex items-center gap-6 text-sm">
+    <div class="hidden md:flex items-center gap-7 text-[0.95rem]">
       {links.map(({ label, path }) => (
         <a
           href={`${base}${path}`}
-          class={`font-mono transition border-b-2 pb-0.5 ${
+          class={`font-display font-medium transition border-b-2 pb-0.5 ${
             isActive(path)
-              ? 'text-accent border-accent'
-              : 'text-[#e5e5e5] border-transparent hover:text-accent hover:border-accent/50'
+              ? 'text-fg border-signal'
+              : 'text-fg2 border-transparent hover:text-fg hover:border-subtle'
           }`}
+          aria-current={isActive(path) ? 'page' : undefined}
         >
           {label}
         </a>
       ))}
       <a
-        href={`${base}/downloads/CV_WB.pdf`}
+        href={`${base}/downloads/CV_WB_gen.pdf`}
         download="CV_Walid_Birouk.pdf"
-        class="font-mono text-accent border border-accent/40 px-3 py-1 rounded hover:bg-accent/10 transition text-xs"
+        class="font-display font-medium text-fg2 hover:text-fg transition"
       >
-        CV ↓
+        CV
       </a>
+      <button type="button" class="theme-toggle text-fg hover:text-accent transition p-2.5 -m-0.5 rounded-md" aria-label="Switch between light and dark theme">
+        <svg class="icon-sun w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"></circle><path stroke-linecap="round" d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+        <svg class="icon-moon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg>
+      </button>
     </div>
 
-    <!-- Mobile hamburger -->
-    <button id="menu-btn" class="md:hidden text-[#e5e5e5] p-2" aria-label="Toggle menu">
-      <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-      <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-      </svg>
-    </button>
+    <!-- Mobile -->
+    <div class="md:hidden flex items-center gap-1">
+      <button type="button" class="theme-toggle text-fg hover:text-accent transition p-2.5 -m-0.5 rounded-md" aria-label="Switch between light and dark theme">
+        <svg class="icon-sun w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"></circle><path stroke-linecap="round" d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+        <svg class="icon-moon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg>
+      </button>
+      <button id="menu-btn" class="text-fg p-2.5" aria-label="Toggle menu" aria-expanded="false">
+        <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
   </div>
 
-  <!-- Mobile menu -->
-  <div id="mobile-menu" class="hidden md:hidden bg-[#0f0f0f] border-t border-subtle px-4 pb-4">
+  <div id="mobile-menu" class="hidden md:hidden bg-bg border-t border-subtle px-5 pb-4">
     {links.map(({ label, path }) => (
       <a
         href={`${base}${path}`}
-        class={`block py-2 font-mono text-sm border-b border-subtle last:border-0 ${
-          isActive(path) ? 'text-accent' : 'text-[#e5e5e5]'
+        class={`block py-3 font-display font-medium border-b border-subtle ${
+          isActive(path) ? 'text-fg' : 'text-fg2'
         }`}
       >
         {label}
       </a>
     ))}
     <a
-      href={`${base}/downloads/CV_WB.pdf`}
+      href={`${base}/downloads/CV_WB_gen.pdf`}
       download="CV_Walid_Birouk.pdf"
-      class="block py-2 font-mono text-sm text-accent"
+      class="block py-3 font-display font-medium text-fg2"
     >
-      CV ↓
+      CV
     </a>
   </div>
 </nav>
 
 <script>
+  document.querySelectorAll('.theme-toggle').forEach((b) => {
+    b.addEventListener('click', () => {
+      const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    });
+  });
+
   const btn = document.getElementById('menu-btn');
   const menu = document.getElementById('mobile-menu');
   const iconOpen = document.getElementById('icon-open');
@@ -87,13 +103,15 @@ function isActive(path: string): boolean {
 
   btn?.addEventListener('click', () => {
     const isHidden = menu?.classList.toggle('hidden');
+    btn.setAttribute('aria-expanded', String(!isHidden));
     iconOpen?.classList.toggle('hidden', !isHidden);
     iconClose?.classList.toggle('hidden', isHidden ?? true);
   });
 
-  menu?.querySelectorAll('a').forEach(link => {
+  menu?.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
       menu.classList.add('hidden');
+      btn?.setAttribute('aria-expanded', 'false');
       iconOpen?.classList.remove('hidden');
       iconClose?.classList.add('hidden');
     });

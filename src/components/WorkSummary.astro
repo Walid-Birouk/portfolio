@@ -1,0 +1,50 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const roles = [
+  {
+    org: 'Ghazeline',
+    href: `${base}/projects/ghazeline-shop`,
+    role: 'Data engineer and maintainer',
+    when: 'Since January 2026',
+    body: 'I designed the PostgreSQL / Supabase data model behind the online store of a ready-to-wear brand: products, variants, categories, stock and orders. I built the backend features that collect data into it and automated the order summary sheets. I also deployed an n8n AI agent that automates replies on Instagram, and I maintain the store.',
+  },
+  {
+    org: 'RideOnTrack',
+    href: `${base}/projects/railway-anomaly-detection`,
+    role: 'ML engineer, Infrabel railway project',
+    when: '2025',
+    body: 'I developed an anomaly detection system for Belgian railway tracks. A U-Net segmentation model and an autoencoder isolate the critical areas of each image, and YOLOv8 recognises train signals in real time at 91% accuracy.',
+  },
+  {
+    org: 'Algorhythm',
+    href: `${base}/projects/rag-agent-hubspot`,
+    role: 'Generative AI and data engineering, Belgium',
+    when: '2024',
+    body: 'I built a RAG agent over internal BigQuery data and integrated it into HubSpot to answer repetitive internal queries, with Vertex AI workflows behind it. Earlier that year I built a data observability proof of concept with dbt tests and OpenMetadata.',
+  },
+];
+---
+
+<section class="border-t border-subtle pt-12">
+  <h2 class="font-display font-bold text-3xl text-fg mb-10">Recent work</h2>
+
+  <div class="space-y-10">
+    {roles.map((r) => (
+      <div class="grid md:grid-cols-[13rem_1fr] gap-x-10 gap-y-2">
+        <div>
+          <h3 class="font-display font-semibold text-xl text-fg">
+            <a href={r.href} class="underline underline-offset-4 decoration-subtle hover:decoration-accent">{r.org}</a>
+          </h3>
+          <p class="text-sm text-muted mt-1">{r.role}</p>
+          <p class="text-sm text-muted">{r.when}</p>
+        </div>
+        <p class="text-fg2 max-w-[38rem]">{r.body}</p>
+      </div>
+    ))}
+  </div>
+
+  <p class="mt-12">
+    <a href={`${base}/projects`} class="font-display font-semibold text-fg underline underline-offset-4 decoration-signal decoration-2 hover:text-accent">All projects</a>
+  </p>
+</section>
