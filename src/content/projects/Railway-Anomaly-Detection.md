@@ -8,7 +8,7 @@ repoLabel: Built at RideOnTrack for Infrabel, code not public
 flow: ["Track images", "U-Net, Autoencoder", "YOLOv8"]
 ---
 
-### Computer vision for railway safety
+### Anomaly detection for railway safety
 
 ## Context
 
@@ -46,7 +46,7 @@ I worked on this as an ML engineer at RideOnTrack from January to August 2025, o
 <line x1="550" y1="206" x2="680" y2="206" stroke="#6b7280" marker-end="url(#rail-arrow)"></line>
 </svg></div>
 
-- **Anomaly detection on railway tracks** using machine learning and computer vision.
+- **Anomaly detection on railway tracks** using machine learning.
 - **A U-Net segmentation model and an autoencoder** that isolate the critical areas of each track image, which improves detection.
 - **YOLOv8 for real-time train signal recognition**, which reached 91% accuracy.
 

@@ -44,7 +44,7 @@ const groups = [
       <div>
         <div class="flex items-baseline justify-between gap-3 mb-1">
           <h2 class="text-base font-display font-bold">{issuer}</h2>
-          <span class="text-accent text-xs font-display flex-shrink-0">{year}</span>
+          {year && <span class="text-accent text-xs font-display flex-shrink-0">{year}</span>}
         </div>
         <ul class="teal-bullets space-y-1 text-sm text-fg2">
           {items.map((item) => (
