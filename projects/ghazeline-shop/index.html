@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Data and AI work on a live online store. The PostgreSQL / Supabase data model, order summary automation, an n8n agent for Instagram replies and the backend features in between."><meta name="author" content="Walid Birouk"><link rel="canonical" href="https://walid-birouk.github.io/portfolio/projects/ghazeline-shop/"><link rel="icon" href="/portfolio/favicon.ico"><link rel="apple-touch-icon" href="/portfolio/apple-touch-icon.png"><meta property="og:type" content="website"><meta property="og:title" content="Ghazeline Shop | Walid Birouk"><meta property="og:description" content="Data and AI work on a live online store. The PostgreSQL / Supabase data model, order summary automation, an n8n agent for Instagram replies and the backend features in between."><meta property="og:url" content="https://walid-birouk.github.io/portfolio/projects/ghazeline-shop/"><meta property="og:image" content="https://walid-birouk.github.io/portfolio/android-chrome-512x512.png"><meta property="og:site_name" content="Walid Birouk"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Ghazeline Shop | Walid Birouk"><meta name="twitter:description" content="Data and AI work on a live online store. The PostgreSQL / Supabase data model, order summary automation, an n8n agent for Instagram replies and the backend features in between."><meta name="twitter:image" content="https://walid-birouk.github.io/portfolio/android-chrome-512x512.png"><script>
+      try {
+        var t = localStorage.getItem('theme');
+        if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script><title>Ghazeline Shop | Walid Birouk</title><link rel="stylesheet" href="/portfolio/_astro/about.3AmhHqtY.css"><script type="module">document.querySelectorAll(".theme-toggle").forEach(e=>{e.addEventListener("click",()=>{const d=document.documentElement.dataset.theme==="dark"?"light":"dark";document.documentElement.dataset.theme=d;try{localStorage.setItem("theme",d)}catch{}})});const t=document.getElementById("menu-btn"),n=document.getElementById("mobile-menu"),c=document.getElementById("icon-open"),s=document.getElementById("icon-close");t?.addEventListener("click",()=>{const e=n?.classList.toggle("hidden");t.setAttribute("aria-expanded",String(!e)),c?.classList.toggle("hidden",!e),s?.classList.toggle("hidden",e??!0)});n?.querySelectorAll("a").forEach(e=>{e.addEventListener("click",()=>{n.classList.add("hidden"),t?.setAttribute("aria-expanded","false"),c?.classList.remove("hidden"),s?.classList.add("hidden")})});
+</script></head> <body class="min-h-screen flex flex-col"> <nav class="sticky top-0 z-50 bg-bg border-b border-subtle"> <div class="mx-auto max-w-5xl px-5 sm:px-8 h-16 flex items-center justify-between"> <a href="/portfolio/" class="font-display font-bold text-lg tracking-tight text-fg hover:text-accent transition">
+Walid Birouk
+</a> <!-- Desktop nav --> <div class="hidden md:flex items-center gap-7 text-[0.95rem]"> <a href="/portfolio/" class="font-display font-medium transition border-b-2 pb-0.5 text-fg2 border-transparent hover:text-fg hover:border-subtle"> Home </a><a href="/portfolio/about" class="font-display font-medium transition border-b-2 pb-0.5 text-fg2 border-transparent hover:text-fg hover:border-subtle"> About </a><a href="/portfolio/projects" class="font-display font-medium transition border-b-2 pb-0.5 text-fg border-signal" aria-current="page"> Projects </a> <a href="/portfolio/downloads/CV_WB_gen.pdf" download="CV_Walid_Birouk.pdf" class="font-display font-medium text-fg2 hover:text-fg transition">
+CV
+</a> <button type="button" class="theme-toggle text-fg hover:text-accent transition p-2.5 -m-0.5 rounded-md" aria-label="Switch between light and dark theme"> <svg class="icon-sun w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"></circle><path stroke-linecap="round" d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg> <svg class="icon-moon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg> </button> </div> <!-- Mobile --> <div class="md:hidden flex items-center gap-1"> <button type="button" class="theme-toggle text-fg hover:text-accent transition p-2.5 -m-0.5 rounded-md" aria-label="Switch between light and dark theme"> <svg class="icon-sun w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"></circle><path stroke-linecap="round" d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg> <svg class="icon-moon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg> </button> <button id="menu-btn" class="text-fg p-2.5" aria-label="Toggle menu" aria-expanded="false"> <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"></path> </svg> <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 18L18 6M6 6l12 12"></path> </svg> </button> </div> </div> <div id="mobile-menu" class="hidden md:hidden bg-bg border-t border-subtle px-5 pb-4"> <a href="/portfolio/" class="block py-3 font-display font-medium border-b border-subtle text-fg2"> Home </a><a href="/portfolio/about" class="block py-3 font-display font-medium border-b border-subtle text-fg2"> About </a><a href="/portfolio/projects" class="block py-3 font-display font-medium border-b border-subtle text-fg"> Projects </a> <a href="/portfolio/downloads/CV_WB_gen.pdf" download="CV_Walid_Birouk.pdf" class="block py-3 font-display font-medium text-fg2">
+CV
+</a> </div> </nav>  <main class="flex-grow mx-auto w-full max-w-5xl px-5 sm:px-8 py-10">  <div class="pt-4"> <h1 class="font-display font-bold text-[clamp(2.2rem,5vw,3.5rem)] leading-tight text-fg max-w-[40rem]">Ghazeline Shop</h1> <p class="mt-3 text-muted">PostgreSQL, Supabase, n8n</p> <p class="mt-5 text-sm flex items-center gap-4 flex-wrap"> <a href="https://ghazeline.com" target="_blank" rel="noopener noreferrer" class="btn-primary">
+Visit the live store
+</a>  <span class="text-muted">Private repository, client work</span> </p>  <article class="prose-dark"> <h3 id="data-and-ai-work-on-a-live-online-store">Data and AI work on a live online store</h3>
+<h2 id="context">Context</h2>
+<p>Selling online in Algeria doesn’t work the way it does in Europe. Card payments are rare, so effectively everything is cash on delivery. Shipping runs through private carriers with per-wilaya tariffs. And most sellers operate their entire business out of an Instagram DM inbox.</p>
+<p>Ghazeline is a ready-to-wear brand. Its store went live in January 2026 and I have worked on it since as the data and AI engineer. The shop is small to mid-sized, so the role also covered the backend work the data depended on.</p>
+<h2 id="what-i-did">What I did</h2>
+<ul>
+<li>Designed the PostgreSQL / Supabase data model: products, variants, categories, stock and orders.</li>
+<li>Built backend features that collect data into that model.</li>
+<li>Automated the creation of order summary sheets.</li>
+<li>Deployed an AI agent on n8n that replies to Instagram messages.</li>
+<li>Maintain the store: fixes and new features from business feedback, and monitoring of the data flows.</li>
+</ul>
+<h2 id="constraints">Constraints</h2>
+<ul>
+<li><strong>Cash on delivery is the default, not an edge case.</strong> There is no payment gateway to lean on for order confirmation or fraud signal.</li>
+<li><strong>58 wilayas</strong>, each with its own home-delivery and stop-desk tariff.</li>
+<li><strong>The operator is not technical</strong> and runs the shop from a phone.</li>
+</ul>
+<h2 id="how-the-store-fits-together">How the store fits together</h2>
+<p>The store runs on Next.js on Vercel, with Supabase for Postgres, auth and storage. Orders go to Yalidine to create parcels and sync shipping status, and a Telegram bot alerts the operator to new orders. My work sits in the Supabase data model and the automations around it.</p>
+<div style="overflow-x:auto;margin:1.5rem 0;"><svg viewBox="0 0 880 500" role="img" aria-label="Ghazeline Shop architecture: browser storefront and localStorage cart, Vercel-hosted Next.js split into public routes using the anonymous Supabase client behind RLS and admin API routes using the service-role client server-side only, both writing to Supabase Postgres, Auth and Storage, with Meta Pixel, the Yalidine API and a Telegram bot as external services." style="width:100%;max-width:880px;height:auto;display:block;margin:0 auto;font-family:&#x27;JetBrains Mono&#x27;,monospace;">
+<defs><marker id="ghz-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7280"></path></marker></defs>
+<text x="20" y="20" fill="#6b7280" font-size="12">Browser</text>
+<rect x="20" y="28" width="540" height="84" rx="8" fill="none" stroke="#3f3f46" stroke-dasharray="4 4"></rect>
+<rect x="36" y="44" width="244" height="52" rx="6" fill="#141414" stroke="#262626"></rect>
+<text x="158" y="66" text-anchor="middle" fill="#e5e5e5" font-size="13" font-weight="700">Storefront UI</text>
+<text x="158" y="84" text-anchor="middle" fill="#6b7280" font-size="10.5">catalogue · variants · reviews</text>
+<rect x="300" y="44" width="244" height="52" rx="6" fill="#141414" stroke="#262626"></rect>
+<text x="422" y="66" text-anchor="middle" fill="#e5e5e5" font-size="13" font-weight="700">Cart in localStorage</text>
+<text x="422" y="84" text-anchor="middle" fill="#6b7280" font-size="10.5">React Context · no DB round-trip</text>
+<text x="20" y="140" fill="#6b7280" font-size="12">Vercel: Next.js 15</text>
+<rect x="20" y="148" width="540" height="152" rx="8" fill="none" stroke="#2dd4bf" stroke-opacity="0.35" stroke-dasharray="4 4"></rect>
+<line x1="290" y1="162" x2="290" y2="286" stroke="#3f3f46" stroke-dasharray="3 3"></line>
+<rect x="36" y="164" width="242" height="120" rx="6" fill="#141414" stroke="#2dd4bf" stroke-opacity="0.7"></rect>
+<text x="157" y="188" text-anchor="middle" fill="#2dd4bf" font-size="13" font-weight="700">Public routes</text>
+<text x="157" y="210" text-anchor="middle" fill="#e5e5e5" font-size="11">anon Supabase client</text>
+<text x="157" y="228" text-anchor="middle" fill="#6b7280" font-size="10.5">RLS enforced</text>
+<text x="157" y="252" text-anchor="middle" fill="#6b7280" font-size="10.5">shared pricing engine,</text>
+<text x="157" y="268" text-anchor="middle" fill="#6b7280" font-size="10.5">server recalculates every total</text>
+<rect x="302" y="164" width="242" height="120" rx="6" fill="#141414" stroke="#e5e5e5" stroke-opacity="0.55" stroke-width="1.5"></rect>
+<text x="423" y="188" text-anchor="middle" fill="#e5e5e5" font-size="13" font-weight="700">Admin API routes</text>
+<text x="423" y="210" text-anchor="middle" fill="#e5e5e5" font-size="11">service-role client</text>
+<text x="423" y="228" text-anchor="middle" fill="#6b7280" font-size="10.5">server-side only</text>
+<text x="423" y="252" text-anchor="middle" fill="#6b7280" font-size="10.5">never shipped to the browser</text>
+<text x="423" y="268" text-anchor="middle" fill="#6b7280" font-size="10.5">full access, bypasses RLS</text>
+<text x="20" y="340" fill="#6b7280" font-size="12">Supabase</text>
+<rect x="20" y="348" width="540" height="132" rx="8" fill="none" stroke="#3f3f46"></rect>
+<rect x="36" y="364" width="164" height="100" rx="6" fill="#141414" stroke="#262626"></rect>
+<text x="118" y="390" text-anchor="middle" fill="#e5e5e5" font-size="13" font-weight="700">Postgres</text>
+<text x="118" y="412" text-anchor="middle" fill="#6b7280" font-size="10">orders · products</text>
+<text x="118" y="428" text-anchor="middle" fill="#6b7280" font-size="10">tariffs · promo codes</text>
+<text x="118" y="444" text-anchor="middle" fill="#6b7280" font-size="10">RLS · triggers · procs</text>
+<rect x="214" y="364" width="164" height="100" rx="6" fill="#141414" stroke="#262626"></rect>
+<text x="296" y="390" text-anchor="middle" fill="#e5e5e5" font-size="13" font-weight="700">Auth</text>
+<text x="296" y="412" text-anchor="middle" fill="#6b7280" font-size="10">admin accounts</text>
+<text x="296" y="428" text-anchor="middle" fill="#6b7280" font-size="10">customer accounts</text>
+<text x="296" y="444" text-anchor="middle" fill="#6b7280" font-size="10">optional by design</text>
+<rect x="392" y="364" width="152" height="100" rx="6" fill="#141414" stroke="#262626"></rect>
+<text x="468" y="390" text-anchor="middle" fill="#e5e5e5" font-size="13" font-weight="700">Storage</text>
+<text x="468" y="412" text-anchor="middle" fill="#6b7280" font-size="10">product images</text>
+<text x="468" y="428" text-anchor="middle" fill="#6b7280" font-size="10">galleries</text>
+<text x="604" y="20" fill="#6b7280" font-size="12">External</text>
+<rect x="604" y="28" width="256" height="84" rx="6" fill="#141414" stroke="#262626"></rect>
+<text x="732" y="52" text-anchor="middle" fill="#e5e5e5" font-size="13" font-weight="700">Meta Pixel</text>
+<text x="732" y="74" text-anchor="middle" fill="#6b7280" font-size="10">ViewContent · AddToCart</text>
+<text x="732" y="92" text-anchor="middle" fill="#6b7280" font-size="10">InitiateCheckout · Purchase</text>
+<rect x="604" y="148" width="256" height="92" rx="6" fill="#141414" stroke="#262626"></rect>
+<text x="732" y="176" text-anchor="middle" fill="#e5e5e5" font-size="13" font-weight="700">Yalidine API</text>
+<text x="732" y="200" text-anchor="middle" fill="#6b7280" font-size="10">create parcels on order</text>
+<text x="732" y="218" text-anchor="middle" fill="#6b7280" font-size="10">sync shipping status back</text>
+<rect x="604" y="272" width="256" height="72" rx="6" fill="#141414" stroke="#262626"></rect>
+<text x="732" y="300" text-anchor="middle" fill="#e5e5e5" font-size="13" font-weight="700">Telegram bot</text>
+<text x="732" y="324" text-anchor="middle" fill="#6b7280" font-size="10">new-order alerts to the operator</text>
+<line x1="290" y1="112" x2="290" y2="146" stroke="#6b7280" marker-end="url(#ghz-arrow)"></line>
+<line x1="157" y1="284" x2="157" y2="346" stroke="#6b7280" marker-end="url(#ghz-arrow)"></line>
+<text x="164" y="320" fill="#6b7280" font-size="9.5">via RLS</text>
+<line x1="423" y1="284" x2="423" y2="346" stroke="#6b7280" marker-end="url(#ghz-arrow)"></line>
+<text x="430" y="320" fill="#6b7280" font-size="9.5">full access</text>
+<line x1="560" y1="70" x2="602" y2="70" stroke="#6b7280" marker-end="url(#ghz-arrow)"></line>
+<line x1="560" y1="186" x2="602" y2="186" stroke="#6b7280" marker-end="url(#ghz-arrow)"></line>
+<line x1="604" y1="212" x2="562" y2="212" stroke="#6b7280" marker-end="url(#ghz-arrow)"></line>
+<polyline points="560,266 582,266 582,300 602,300" fill="none" stroke="#6b7280" marker-end="url(#ghz-arrow)"></polyline>
+</svg></div>
+<h2 id="data-model">Data model</h2>
+<p><strong>Customers are phone numbers.</strong> A cash-on-delivery buyer will not create an account to buy one item, so accounts are optional and anonymous checkout is supported. Orders key on phone number and customer history aggregates from orders. That keeps the checkout short and still gives the admin a real view of repeat buyers and lifetime spend.</p>
+<h2 id="stack">Stack</h2>
+<p>My side: PostgreSQL, Supabase, n8n. The store itself runs on Next.js, TypeScript, Vercel and the Yalidine API.</p> </article> </div>  </main> <footer class="border-t border-subtle mt-16"> <div class="mx-auto max-w-5xl px-5 sm:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4"> <p class="text-muted text-sm">
+&copy; 2026 Walid Birouk. Based in Paris.
+</p> <div class="flex justify-center items-center gap-6"> <a href="https://www.linkedin.com/in/walid-birouk/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-muted hover:text-accent transition"> <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin text-2xl" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg> </a> <a href="https://github.com/Walid-Birouk" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-muted hover:text-accent transition"> <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github text-2xl" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg> </a> <a href="mailto:walid.birouk@outlook.com" aria-label="Email" class="text-muted hover:text-accent transition"> <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope" class="svg-inline--fa fa-envelope text-2xl" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"></path></svg> </a> </div> </div> </footer> </body></html>
