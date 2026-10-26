@@ -65,7 +65,7 @@ export default function Header() {
 
       <div className="flex flex-wrap mt-8 gap-3 items-center">
         <a
-          href={`${base}/projects/ghazeline-ecommerce`}
+          href={`${base}/projects/ghazeline-shop`}
           className="font-mono text-sm px-4 py-2 border border-accent/40 rounded text-[#e5e5e5] hover:bg-accent/10 hover:text-accent transition"
         >
           Latest work

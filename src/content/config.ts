@@ -6,9 +6,15 @@ const projects = defineCollection({
     title: z.string(),
     stack: z.string(),
     pageSlug: z.string(),
-    date: z.date(),
-    thumb: z.string(),
+    date: z.date().optional(),
+    thumb: z.string().optional(),
+    order: z.number().optional(),
+    description: z.string().optional(),
+    flow: z.array(z.string()).optional(),
     images: z.array(z.string()).optional(),
+    repoUrl: z.string().url().optional(),
+    repoLabel: z.string().optional(),
+    liveUrl: z.string().optional(),
   }),
 });
 

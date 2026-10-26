@@ -1,0 +1,57 @@
+---
+// Source: Walid's CV (cv.yml). Facts only.
+const groups = [
+  {
+    issuer: 'Dataiku',
+    year: '2025',
+    items: [
+      'Generative AI Practitioner',
+      'ML Practitioner',
+      'MLOps Practitioner',
+      'Core Designer',
+      'Advanced Designer',
+      'Developer',
+    ],
+  },
+  {
+    issuer: 'AWS Academy',
+    year: '2025',
+    items: ['Data Engineering, Graduate (40 h)'],
+  },
+  {
+    issuer: 'Microsoft / Coursera',
+    year: '2024',
+    items: ['Azure Databricks for Data Engineering'],
+  },
+  {
+    issuer: 'IBM / Coursera',
+    year: '2024',
+    items: ['Machine Learning with Python'],
+  },
+  {
+    issuer: 'dbt Labs',
+    year: '2024',
+    items: ['dbt Fundamentals'],
+  },
+];
+---
+
+<div>
+  <h2 class="font-mono font-bold text-2xl text-[#e5e5e5] mb-8">Certifications</h2>
+
+  <div class="space-y-5">
+    {groups.map(({ issuer, year, items }) => (
+      <div>
+        <div class="flex items-baseline justify-between gap-3 mb-1">
+          <h2 class="text-base font-mono font-bold">{issuer}</h2>
+          {year && <span class="text-accent text-xs font-mono flex-shrink-0">{year}</span>}
+        </div>
+        <ul class="teal-bullets space-y-1 text-sm text-[#d4d4d4]">
+          {items.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+</div>

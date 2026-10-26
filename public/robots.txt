@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://walid-birouk.github.io/portfolio/sitemap.xml

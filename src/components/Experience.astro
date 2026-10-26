@@ -1,111 +1,95 @@
 ---
 import { Image } from 'astro:assets';
-import { BriefcaseIcon } from '@heroicons/react/24/solid';
+import { ShoppingBagIcon, CpuChipIcon } from '@heroicons/react/24/solid';
 import algorhythmLogo from '../images/logo/algorhythm.png';
-import algerieTelecomLogo from '../images/logo/algerieTelecom.png';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <div>
-  <h1 class="text-3xl font-mono font-semibold mt-4 mb-6">WORK EXPERIENCE</h1>
-  <hr class="border-subtle mb-6" />
+  <h2 class="font-mono font-bold text-2xl text-[#e5e5e5] mb-8">Work experience</h2>
 
   <!-- Ghazeline -->
   <div class="mb-10">
     <div class="flex items-center mb-2 gap-3">
       <div class="w-8 h-8 flex-shrink-0 flex items-center justify-center">
-        <BriefcaseIcon className="w-7 h-7 text-accent" />
+        <ShoppingBagIcon className="w-7 h-7 text-accent" />
       </div>
-      <h2 class="text-xl font-mono font-bold">Data & AI Engineer (freelance) — Ghazeline</h2>
+      <h2 class="text-xl font-mono font-bold">Data Engineer, Ghazeline</h2>
     </div>
-    <p class="text-accent text-sm mb-2">January 2026 – Present</p>
-    <p class="text-muted text-sm mb-3">Online store of a women's fashion brand.</p>
-    <ul class="teal-bullets space-y-1 text-[#d4d4d4] text-sm mb-3">
-      <li>Designed the PostgreSQL / Supabase data model (products, variants, categories, stock, orders) for a catalogue of 30+ products.</li>
-      <li>Deployed an n8n AI agent that answers the store's 50–100 daily Instagram customer messages, so the team only steps in for complex requests.</li>
-      <li>Built backend data-collection features and automated order summaries and cash-on-delivery confirmation.</li>
-      <li>Maintain the store in production, shipping fixes and new features from business feedback.</li>
-    </ul>
-    <p class="text-muted text-xs font-mono">
-      <span class="text-[#d4d4d4]">Stack:</span> PostgreSQL · Supabase · n8n
-      &nbsp;·&nbsp; <a href={`${base}/projects/ghazeline-ecommerce`} class="text-accent hover:underline">Project page →</a>
+    <p class="text-accent text-sm">January 2026 – present</p>
+    <p class="text-accent text-sm mb-2">Freelance, ghazeline.com</p>
+    <p class="text-muted text-sm mb-3">
+      Online store of a ready-to-wear fashion brand.
     </p>
+    <ul class="teal-bullets space-y-1 text-[#d4d4d4] text-sm mb-3">
+      <li>Designed the PostgreSQL / Supabase data model: products, variants, categories, stock and orders.</li>
+      <li>Built backend features for data collection that feed the data model.</li>
+      <li>Automated the creation of order summary sheets.</li>
+      <li>Deployed an AI agent on n8n that automates replies on Instagram.</li>
+      <li>Maintain the store: fixes and new features from business feedback, and monitoring of the data flows.</li>
+    </ul>
+    <p class="text-muted text-xs font-mono mb-2">
+      <span class="text-[#d4d4d4]">Stack:</span> PostgreSQL, Supabase, n8n
+    </p>
+    <a href={`${base}/projects/ghazeline-shop`} class="text-accent text-sm font-mono hover:underline">
+      Read the write-up
+    </a>
   </div>
 
-  <!-- Infrabel -->
+  <!-- RideOnTrack -->
   <div class="mb-10">
     <div class="flex items-center mb-2 gap-3">
       <div class="w-8 h-8 flex-shrink-0 flex items-center justify-center">
-        <BriefcaseIcon className="w-7 h-7 text-accent" />
+        <CpuChipIcon className="w-7 h-7 text-accent" />
       </div>
-      <h2 class="text-xl font-mono font-bold">ML Engineer — Infrabel (RideOnTrack project)</h2>
+      <h2 class="text-xl font-mono font-bold">ML Engineer, RideOnTrack (Infrabel project)</h2>
     </div>
-    <p class="text-accent text-sm mb-2">January 2025 – August 2025</p>
-    <p class="text-muted text-sm mb-3">Anomaly detection for the Belgian railway network.</p>
+    <p class="text-accent text-sm mb-3">January 2025 – August 2025</p>
     <ul class="teal-bullets space-y-1 text-[#d4d4d4] text-sm mb-3">
-      <li>Developed an anomaly detection system for Belgian railway tracks with machine learning and computer vision.</li>
-      <li>Used a U-Net segmentation model and an autoencoder to isolate critical areas, enabling targeted inspection.</li>
-      <li>Integrated YOLOv8 for real-time train signal recognition (91% accuracy).</li>
+      <li>Developed an anomaly detection system for Belgian railway tracks using machine learning.</li>
+      <li>Implemented a U-Net segmentation model and an autoencoder to isolate critical areas and improve detection.</li>
+      <li>Integrated YOLOv8 for real-time train signal recognition, reaching 91% accuracy.</li>
     </ul>
     <p class="text-muted text-xs font-mono">
-      <span class="text-[#d4d4d4]">Stack:</span> Python · TensorFlow · U-Net · YOLOv8 · AWS
-      &nbsp;·&nbsp; <a href={`${base}/projects/infrabel-railway-anomaly-detection`} class="text-accent hover:underline">Project page →</a>
+      <span class="text-[#d4d4d4]">Stack:</span> Python, TensorFlow, U-Net, YOLOv8, AWS SageMaker, Git
     </p>
   </div>
 
-  <!-- Algorhythm -->
+  <!-- Algorhythm: GenAI -->
   <div class="mb-10">
     <div class="flex items-center mb-2 gap-3">
       <Image src={algorhythmLogo} alt="Algorhythm" width={32} height={32} class="w-8 h-8 flex-shrink-0" />
-      <h2 class="text-xl font-mono font-bold">Algorhythm</h2>
+      <h2 class="text-xl font-mono font-bold">Generative AI Engineer, Algorhythm</h2>
     </div>
-    <p class="text-accent text-sm">February 2024 – December 2024</p>
-    <p class="text-accent text-sm mb-2">Turnhout, Belgium</p>
-    <p class="text-muted text-sm mb-4">Specialized consultancy in Modern Data Stack and AI solutions.</p>
-
-    <h3 class="text-lg font-mono font-semibold">Generative AI Engineer</h3>
-    <p class="text-accent text-sm mb-2">September 2024 – December 2024</p>
+    <p class="text-accent text-sm mb-3">September 2024 – December 2024</p>
     <ul class="teal-bullets space-y-1 text-[#d4d4d4] text-sm mb-3">
-      <li>Built a RAG agent on Vertex AI over internal BigQuery data and integrated it into HubSpot for about 50 employees, so they get answers from company data without leaving their CRM.</li>
-      <li>Developed Vertex AI workflows that automate recurring internal writing tasks in a consistent, specialised tone.</li>
-    </ul>
-    <p class="text-muted text-xs font-mono mb-5">
-      <span class="text-[#d4d4d4]">Stack:</span> Vertex AI · BigQuery · HubSpot · Python
-      &nbsp;·&nbsp; <a href={`${base}/projects/hubspot-rag-agent`} class="text-accent hover:underline">Project page →</a>
-    </p>
-
-    <h3 class="text-lg font-mono font-semibold">Data Engineering & Data Quality Intern</h3>
-    <p class="text-accent text-sm mb-2">February 2024 – July 2024</p>
-    <ul class="teal-bullets space-y-1 text-[#d4d4d4] text-sm mb-3">
-      <li>Built a data observability proof of concept: automated dbt tests and data-quality checks, with results piped to OpenMetadata.</li>
-      <li>Set up a local Data Lakehouse environment via Docker for internal experimentation and tool evaluation.</li>
-      <li>Built ELT pipelines structured around a medallion architecture (Bronze / Silver / Gold).</li>
-      <li>Modeled and transformed data with dbt — uniqueness, not null, and relation tests across 20+ models.</li>
-      <li>Orchestrated workflows with Apache Airflow.</li>
-      <li>Conducted a comparative study of Data Observability tools and presented the results to stakeholders.</li>
+      <li>Developed AI workflows on Vertex AI and BigQuery to automate internal tasks with a consistent, specialised tone.</li>
+      <li>Built a RAG agent that retrieves internal BigQuery data for accurate, context-aware answers.</li>
+      <li>Integrated the agent into HubSpot to support internal communication and automate repetitive queries.</li>
     </ul>
     <p class="text-muted text-xs font-mono">
-      <span class="text-[#d4d4d4]">Stack:</span> Spark · Airflow · dbt · OpenMetadata · PostgreSQL · Docker · Python · SQL
-      &nbsp;·&nbsp; <a href={`${base}/projects/data-observability-internship`} class="text-accent hover:underline">Project page →</a>
+      <span class="text-[#d4d4d4]">Stack:</span> Vertex AI, BigQuery, HubSpot
     </p>
   </div>
 
-  <!-- Algérie Télécom -->
+  <!-- Algorhythm: internship -->
   <div class="mb-4">
     <div class="flex items-center mb-2 gap-3">
-      <Image src={algerieTelecomLogo} alt="Algérie Télécom" width={32} height={32} class="w-8 h-8 flex-shrink-0" />
-      <h2 class="text-xl font-mono font-bold">Software Developer Intern — Algérie Télécom</h2>
+      <Image src={algorhythmLogo} alt="Algorhythm" width={32} height={32} class="w-8 h-8 flex-shrink-0" />
+      <h2 class="text-xl font-mono font-bold">Data Engineering &amp; Data Quality Intern, Algorhythm</h2>
     </div>
-    <p class="text-accent text-sm">March 2021 – June 2021</p>
-    <p class="text-accent text-sm mb-3">Jijel, Algeria</p>
+    <p class="text-accent text-sm">February 2024 – July 2024</p>
+    <p class="text-accent text-sm mb-2">Turnhout, Belgium</p>
+    <p class="text-muted text-sm mb-3">Specialized consultancy in Modern Data Stack and AI solutions.</p>
     <ul class="teal-bullets space-y-1 text-[#d4d4d4] text-sm mb-3">
-      <li>Developed an online appointment booking system.</li>
-      <li>Optimized SQL queries — improved application performance by ~30%.</li>
-      <li>Partial redesign of the user interface.</li>
+      <li>Built a data observability proof of concept: automated dbt tests and manual data-quality checks, with results piped to OpenMetadata.</li>
     </ul>
-    <p class="text-muted text-xs font-mono">
-      <span class="text-[#d4d4d4]">Stack:</span> Laravel · PHP · JavaScript · MySQL
+    <p class="text-muted text-xs font-mono mb-2">
+      <span class="text-[#d4d4d4]">Stack:</span> dbt, OpenMetadata
     </p>
+    <a href={`${base}/projects/data-observability-internship`} class="text-accent text-sm font-mono hover:underline">
+      Read the write-up
+    </a>
   </div>
 </div>
