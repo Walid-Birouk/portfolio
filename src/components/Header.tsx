@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const roles = ['Data Engineer.', 'Analytics Engineer.'];
+const roles = ['AI Engineer.', 'Data Engineer.', 'ML Engineer.'];
 
 export default function Header() {
   const [text, setText] = useState('');
@@ -19,7 +19,7 @@ export default function Header() {
 
       if (!isDeleting && text === fullText) {
         setTimeout(() => setIsDeleting(true), 1200);
-      } else if (isDeleting && text === 'Data ') {
+      } else if (isDeleting && text === '') {
         setIsDeleting(false);
         setLoopNum((n) => n + 1);
       }
@@ -40,35 +40,35 @@ export default function Header() {
         </h2>
         <div className="text-sm md:text-base space-y-3 text-[#d4d4d4] leading-relaxed">
           <p>
-            I am a Master's student in{' '}
-            <span className="text-accent">Expert Systems (AI)</span> at EPSI
-            France, building on a Bachelor's in{' '}
-            <span className="text-accent">Applied Computer Science (AI)</span>{' '}
-            from Thomas More in Belgium.
+            I am an <span className="text-accent">AI & Data Engineer</span> with
+            2.5 years of hands-on experience building AI that runs in
+            production: a <span className="text-accent">RAG agent</span> over
+            BigQuery integrated into HubSpot, an{' '}
+            <span className="text-accent">n8n AI agent</span> answering 50–100
+            customer messages a day for a fashion e-commerce brand, and{' '}
+            <span className="text-accent">computer-vision models</span> for
+            railway safety at Infrabel.
           </p>
           <p>
-            I specialize in building end-to-end data pipelines and{' '}
-            <span className="text-accent">lakehouse architectures</span> using{' '}
-            <span className="text-accent">Spark, Kafka, dbt,</span> and{' '}
-            <span className="text-accent">Airflow</span>. During my internship
-            at Algorhythm I built ELT pipelines following a medallion
-            architecture and implemented data quality checks across 20+ dbt
-            models.
+            I work from data models and pipelines (
+            <span className="text-accent">PostgreSQL, dbt, Spark, Airflow</span>)
+            to deploying models and agents on{' '}
+            <span className="text-accent">GCP and AWS</span>.
           </p>
           <p>
-            Currently seeking an{' '}
-            <span className="text-accent">apprenticeship (alternance)</span> in
-            Data Engineering or Analytics Engineering.
+            Available now for a{' '}
+            <span className="text-accent">full-time role</span> as an AI
+            Engineer or Data / ML Engineer, in Paris or anywhere in France.
           </p>
         </div>
       </div>
 
       <div className="flex flex-wrap mt-8 gap-3 items-center">
         <a
-          href={`${base}/projects/data-observability-internship`}
+          href={`${base}/projects/ghazeline-ecommerce`}
           className="font-mono text-sm px-4 py-2 border border-accent/40 rounded text-[#e5e5e5] hover:bg-accent/10 hover:text-accent transition"
         >
-          Internship
+          Latest work
         </a>
         <a
           href={`${base}/projects`}

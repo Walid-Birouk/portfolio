@@ -1,6 +1,6 @@
 ---
 title: Data Observability (Internship)
-stack: Docker & OpenMetadata & Docker
+stack: Docker & OpenMetadata & dbt
 pageSlug: data-observability-internship
 date: 2024-06-05T00:00:00+00:00
 thumb: do.png

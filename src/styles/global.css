@@ -53,7 +53,7 @@ ul.teal-bullets li::before {
 }
 
 /* Hero image shape */
-.hero-img { border-radius: 0 50% 50% 50%; }
+.hero-img { border-radius: 1.5rem; }
 
 /* Prose styles for markdown content (project detail pages) */
 .prose-dark {
