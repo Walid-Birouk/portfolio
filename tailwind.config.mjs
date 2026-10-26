@@ -4,14 +4,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        accent: '#2dd4bf',
-        surface: '#141414',
-        subtle: '#262626',
-        muted: '#6b7280',
+        accent: 'rgb(var(--c-accent) / <alpha-value>)',
+        surface: 'rgb(var(--c-surface) / <alpha-value>)',
+        subtle: 'rgb(var(--c-subtle) / <alpha-value>)',
+        muted: 'rgb(var(--c-muted) / <alpha-value>)',
+        bg: 'rgb(var(--c-bg) / <alpha-value>)',
+        fg: 'rgb(var(--c-fg) / <alpha-value>)',
+        signal: 'rgb(var(--c-signal) / <alpha-value>)',
+        fg2: 'rgb(var(--c-fg2) / <alpha-value>)',
       },
       fontFamily: {
-        mono: ['"JetBrains Mono"', '"Fira Code"', '"Cascadia Code"', 'monospace'],
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['"Bricolage Grotesque"', 'system-ui', 'sans-serif'],
+        sans: ['Literata', 'Georgia', 'serif'],
       },
     },
   },

@@ -2,8 +2,6 @@
 title: RAG Agent in HubSpot
 stack: Vertex AI & BigQuery & HubSpot
 pageSlug: rag-agent-hubspot
-thumb: rag.svg
-date: 2024-09-15T00:00:00+00:00
 order: 2
 description: A retrieval-augmented generation agent that answers from internal BigQuery data, built on Vertex AI and integrated into HubSpot at Algorhythm.
 repoLabel: Built at Algorhythm, code not public

@@ -2,7 +2,6 @@
 title: Ghazeline Shop
 stack: PostgreSQL & Supabase & n8n
 pageSlug: ghazeline-shop
-thumb: ghazeline.svg
 date: 2026-01-01T00:00:00+00:00
 order: 1
 description: Data and AI work on a live online store. The PostgreSQL / Supabase data model, order summary automation, an n8n agent for Instagram replies and the backend features in between.

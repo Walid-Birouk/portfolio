@@ -2,7 +2,6 @@
 title: Data Observability (Internship, Algorhythm)
 stack: OpenMetadata & Docker & Airflow & Airbyte & dbt & Spark
 pageSlug: data-observability-internship
-thumb: do.png
 date: 2024-06-05T00:00:00+00:00
 order: 7
 description: A comparative study of data observability tools for Algorhythm, plus a Dockerised modern data stack sandbox and an OpenMetadata proof of concept.

@@ -2,8 +2,6 @@
 title: Railway Track Anomaly Detection
 stack: Python & TensorFlow & U-Net & YOLOv8 & AWS SageMaker
 pageSlug: railway-anomaly-detection
-thumb: infrabel.svg
-date: 2025-01-15T00:00:00+00:00
 order: 3
 description: An anomaly detection system for Belgian railway tracks using U-Net segmentation, an autoencoder and YOLOv8 signal recognition, built for an Infrabel project at RideOnTrack.
 repoLabel: Built at RideOnTrack for Infrabel, code not public

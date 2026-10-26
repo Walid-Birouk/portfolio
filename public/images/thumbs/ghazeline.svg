@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="440" viewBox="0 0 800 440">
-  <rect width="800" height="440" fill="#141414"/>
-  <rect x="0" y="0" width="800" height="6" fill="#2dd4bf"/>
-  <g fill="none" stroke="#2dd4bf" stroke-opacity="0.18" stroke-width="2"><circle cx="640" cy="220" r="120"/><circle cx="640" cy="220" r="80"/><circle cx="640" cy="220" r="40"/></g>
-  <text x="400" text-anchor="middle" y="120" font-family="JetBrains Mono, Fira Code, monospace" font-size="22" fill="#2dd4bf">FREELANCE · 2026</text>
-  <text x="400" text-anchor="middle" y="250" font-family="JetBrains Mono, Fira Code, monospace" font-size="54" font-weight="700" fill="#e5e5e5">Ghazeline</text>
-  <text x="400" text-anchor="middle" y="370" font-family="JetBrains Mono, Fira Code, monospace" font-size="22" fill="#a3a3a3">PostgreSQL · Supabase · n8n agent</text>
-</svg>

@@ -1,0 +1,24 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+}
+
+const { project } = Astro.props;
+const { title, stack, pageSlug, description } = project.data;
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const href = `${base}/projects/${pageSlug}`;
+---
+
+<a
+  href={href}
+  class="group grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)] gap-x-10 gap-y-2 py-7 border-t border-subtle"
+>
+  <h3 class="font-display font-semibold text-xl text-fg group-hover:text-accent transition-colors">{title}</h3>
+  <div>
+    <p class="text-fg2 text-[0.98rem] line-clamp-3">{description}</p>
+    <p class="mt-2 text-sm text-muted">{stack.split(' & ').join(', ')}</p>
+  </div>
+</a>

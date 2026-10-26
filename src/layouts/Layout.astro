@@ -6,12 +6,21 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  ogType?: string;
 }
 
 const {
-  title = 'Walid Birouk',
-  description = 'Data Engineering & AI Portfolio — Walid Birouk',
+  title = 'Walid Birouk | AI & Data Engineer',
+  description = 'Walid Birouk, AI & Data Engineer. Generative AI (RAG, LLM agents) and data engineering on Google Cloud, AWS, Azure and PostgreSQL.',
+  ogType = 'website',
 } = Astro.props;
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+// Astro.site is https://walid-birouk.github.io and base is /portfolio, so canonical
+// URLs must include both. Astro.url.pathname already carries the base prefix.
+const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://walid-birouk.github.io').href;
+const ogImage = new URL(`${base}/android-chrome-512x512.png`, Astro.site ?? 'https://walid-birouk.github.io').href;
 ---
 
 <!doctype html>
@@ -21,12 +30,35 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="author" content="Walid Birouk" />
-    <link rel="icon" href={`${import.meta.env.BASE_URL}favicon.ico`} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href={`${base}/favicon.ico`} />
+    <link rel="apple-touch-icon" href={`${base}/apple-touch-icon.png`} />
+
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content="Walid Birouk" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <script is:inline>
+      try {
+        var t = localStorage.getItem('theme');
+        if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
     <title>{title}</title>
+    <slot name="head" />
   </head>
   <body class="min-h-screen flex flex-col">
     <NavBar />
-    <main class="flex-grow container mx-auto px-4 py-8 max-w-6xl">
+    <main class="flex-grow mx-auto w-full max-w-5xl px-5 sm:px-8 py-10">
       <slot />
     </main>
     <Footer />

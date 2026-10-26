@@ -2,7 +2,6 @@
 title: Azure Databricks, ADLS Gen2 Pipeline
 stack: PySpark & Spark SQL & Delta Lake & ADLS Gen2
 pageSlug: azure-databricks-etl
-thumb: ad0.png
 date: 2024-02-02T00:00:00+00:00
 order: 4
 description: A three-layer Bronze/Silver/Gold ETL pipeline on Azure Databricks and ADLS Gen2, modelling Airbnb listing and calendar data into a Delta Lake star schema.

@@ -1,0 +1,74 @@
+---
+// Generated card thumbnail: the project's pipeline as four boxes, driven by `flow`
+// in the project frontmatter. Nothing to export or upload; edit the labels to change it.
+interface Props {
+  flow: string[];
+  label: string;
+  class?: string;
+}
+
+const { flow, label, class: cls = 'h-44' } = Astro.props;
+const nodes = flow.slice(0, 4);
+
+// 2x2 snake: 0 -> 1 down to 2 <- 3 would read oddly, so order is
+// top-left, top-right, bottom-right, bottom-left.
+const pos = [
+  { x: 24, y: 34 },
+  { x: 176, y: 34 },
+  { x: 176, y: 104 },
+  { x: 24, y: 104 },
+];
+const W = 120;
+const H = 38;
+const last = nodes.length - 1;
+---
+
+<svg
+  viewBox="0 0 320 176"
+  role="img"
+  aria-label={`${label}: ${nodes.join(' → ')}`}
+  class:list={['w-full bg-bg', cls]}
+  font-family="'JetBrains Mono', monospace"
+>
+  <defs>
+    <marker id="thumb-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7280"></path>
+    </marker>
+  </defs>
+
+  {nodes.slice(0, -1).map((_, i) => {
+    const a = pos[i];
+    const b = pos[i + 1];
+    const horizontal = a.y === b.y;
+    const x1 = horizontal ? (b.x > a.x ? a.x + W : a.x) : a.x + W / 2;
+    const x2 = horizontal ? (b.x > a.x ? b.x : b.x + W) : b.x + W / 2;
+    const y1 = horizontal ? a.y + H / 2 : a.y + H;
+    const y2 = horizontal ? b.y + H / 2 : b.y;
+    return <line x1={x1} y1={y1} x2={x2} y2={y2} stroke="#6b7280" marker-end="url(#thumb-arrow)" />;
+  })}
+
+  {nodes.map((name, i) => (
+    <g>
+      <rect
+        x={pos[i].x}
+        y={pos[i].y}
+        width={W}
+        height={H}
+        rx="6"
+        fill="#141414"
+        stroke={i === last ? '#2dd4bf' : '#262626'}
+        stroke-opacity={i === last ? 0.7 : 1}
+      />
+      <text
+        x={pos[i].x + W / 2}
+        y={pos[i].y + H / 2 + 4}
+        text-anchor="middle"
+        fill={i === last ? '#2dd4bf' : '#e5e5e5'}
+        font-size="12"
+        font-weight="700"
+      >
+        {name}
+      </text>
+    </g>
+  ))}
+</svg>

@@ -2,7 +2,6 @@
 title: Real-Time Big Data Pipeline
 stack: Kafka & Spark Structured Streaming & MinIO & Docker
 pageSlug: real-time-big-data-pipeline
-thumb: sa.png
 date: 2024-12-01T00:00:00+00:00
 order: 5
 description: A containerised streaming pipeline that moves simulated financial transactions through Kafka and Spark Structured Streaming into partitioned Parquet on MinIO.

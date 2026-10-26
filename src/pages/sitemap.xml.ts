@@ -8,7 +8,7 @@ const SITE = 'https://walid-birouk.github.io';
 export const GET: APIRoute = async () => {
   const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   const projects = await getCollection('projects');
-  projects.sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
+  projects.sort((a, b) => a.data.order - b.data.order);
 
   const paths = [
     '/',

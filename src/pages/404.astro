@@ -3,10 +3,10 @@ import Layout from '../layouts/Layout.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
-<Layout title="404 — Not Found">
-  <div class="min-h-[60vh] flex flex-col items-center justify-center text-center">
-    <h1 class="text-8xl font-mono font-bold text-accent mb-4">404</h1>
-    <p class="text-muted text-xl mb-8">Page not found.</p>
-    <a href={base} class="text-accent hover:underline font-mono">← Back home</a>
+<Layout title="Page not found | Walid Birouk">
+  <div class="min-h-[50vh] pt-12">
+    <h1 class="font-display font-bold text-[clamp(2.2rem,5vw,3.5rem)] text-fg">This page doesn't exist</h1>
+    <p class="mt-3 text-fg2">The link may be old or mistyped.</p>
+    <p class="mt-8"><a href={base} class="btn-primary">Go to the homepage</a></p>
   </div>
 </Layout>

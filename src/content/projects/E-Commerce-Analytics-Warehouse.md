@@ -2,7 +2,6 @@
 title: E-Commerce Analytics Warehouse
 stack: Python & PostgreSQL & dbt & Docker & Metabase
 pageSlug: e-commerce-analytics-warehouse
-thumb: supermarket.png
 date: 2025-01-01T00:00:00+00:00
 order: 6
 description: An ELT warehouse for e-commerce data, with Python ingestion into PostgreSQL, dbt star-schema modelling with tests at every layer, and KPI dashboards in Metabase.

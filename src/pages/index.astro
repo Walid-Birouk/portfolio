@@ -1,24 +1,90 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header';
+import WorkSummary from '../components/WorkSummary.astro';
 import { Image } from 'astro:assets';
-import heroImg from '../images/heroPhoto.jpg';
+import heroImg from '../images/hero.png';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const site = 'https://walid-birouk.github.io/portfolio';
+
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Walid Birouk',
+  jobTitle: 'AI & Data Engineer',
+  url: site,
+  email: 'mailto:walid.birouk@outlook.com',
+  address: { '@type': 'PostalAddress', addressLocality: 'Paris', addressCountry: 'FR' },
+  sameAs: [
+    'https://www.linkedin.com/in/walid-birouk/',
+    'https://github.com/Walid-Birouk',
+  ],
+  knowsAbout: [
+    'Generative AI',
+    'Retrieval-Augmented Generation',
+    'Data Engineering',
+    'Apache Spark',
+    'Apache Kafka',
+    'dbt',
+    'Apache Airflow',
+    'PostgreSQL',
+    'Azure Databricks',
+    'BigQuery',
+    'Vertex AI',
+    'Supabase',
+    'Dataiku',
+    'Delta Lake',
+    'Business Intelligence',
+    'SQL',
+    'Python',
+  ],
+  alumniOf: [
+    { '@type': 'CollegeOrUniversity', name: 'Thomas More' },
+    { '@type': 'CollegeOrUniversity', name: 'Université de Jijel' },
+  ],
+};
 ---
 
-<Layout title="Walid Birouk — AI & Data Engineer">
-  <div class="flex flex-col lg:flex-row lg:justify-between items-center min-h-[80vh] gap-8">
-    <div class="lg:w-1/2 w-full flex items-center">
-      <Header client:load />
+<Layout title="Walid Birouk | AI & Data Engineer">
+  <script
+    slot="head"
+    type="application/ld+json"
+    is:inline
+    set:html={JSON.stringify(personJsonLd)}
+  />
+
+  <section class="grid lg:grid-cols-[1.1fr_1fr] gap-8 lg:gap-14 items-stretch pt-2 pb-14 lg:pt-10 lg:pb-24">
+    <figure class="reveal order-first lg:order-last flex flex-col" style="--d: 0ms">
+      <div class="relative flex-1 min-h-[17rem] lg:min-h-[26rem] overflow-hidden rounded-xl">
+        <Image
+          src={heroImg}
+          alt="Walid Birouk"
+          class="absolute inset-0 w-full h-full object-cover object-[50%_22%]"
+          loading="eager"
+        />
+      </div>
+      <figcaption class="mt-3 text-sm text-muted">Walid Birouk, Paris</figcaption>
+    </figure>
+
+    <div class="flex flex-col justify-center">
+      <h1
+        class="reveal font-display font-bold text-fg text-[clamp(2.2rem,5vw,3.6rem)] leading-[1.06] tracking-tight"
+        style="--d: 80ms"
+      >
+        I build AI agents and the data pipelines they run on.
+      </h1>
+      <p class="reveal mt-6 text-lg text-fg2 max-w-[34rem]" style="--d: 160ms">
+        Freelance AI automation and data engineering from Paris. Python, SQL,
+        PostgreSQL, dbt, BigQuery and Azure Databricks, with generative AI on
+        Google Cloud and AWS.
+      </p>
+      <div class="reveal mt-8 flex flex-wrap gap-3" style="--d: 240ms">
+        <a href="mailto:walid.birouk@outlook.com" class="btn-primary">Email me</a>
+        <a href={`${base}/projects`} class="btn-quiet">See projects</a>
+        <a href={`${base}/downloads/CV_WB_gen.pdf`} download="CV_Walid_Birouk.pdf" class="btn-quiet">Download CV</a>
+      </div>
     </div>
-    <div class="lg:w-1/2 w-full max-w-sm sm:max-w-md flex items-center justify-center">
-      <Image
-        src={heroImg}
-        alt="Walid Birouk"
-        class="hero-img w-full h-auto object-contain"
-        widths={[320, 480, 640, 800]}
-        sizes="(min-width: 1024px) 28rem, (min-width: 640px) 28rem, 90vw"
-        loading="eager"
-      />
-    </div>
-  </div>
+  </section>
+
+  <WorkSummary />
 </Layout>
