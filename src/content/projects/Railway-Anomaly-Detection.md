@@ -3,8 +3,8 @@ title: Railway Track Anomaly Detection
 stack: Python & TensorFlow & U-Net & YOLOv8 & AWS SageMaker
 pageSlug: railway-anomaly-detection
 order: 3
-description: An anomaly detection system for Belgian railway tracks using U-Net segmentation, an autoencoder and YOLOv8 signal recognition, built for an Infrabel project at RideOnTrack.
-repoLabel: Built at RideOnTrack for Infrabel, code not public
+description: An anomaly detection system for Belgian railway tracks using U-Net segmentation, an autoencoder and YOLOv8 signal recognition, built at Infrabel on the RideOnTrack project.
+repoLabel: Built at Infrabel (RideOnTrack project), code not public
 flow: ["Track images", "U-Net, Autoencoder", "YOLOv8"]
 ---
 
@@ -12,7 +12,7 @@ flow: ["Track images", "U-Net, Autoencoder", "YOLOv8"]
 
 ## Context
 
-I worked on this as an ML engineer at RideOnTrack from January to August 2025, on a project for Infrabel, the Belgian railway infrastructure manager.
+I worked on this as an ML engineer at Infrabel, the Belgian railway infrastructure manager, on the RideOnTrack project from January to August 2025.
 
 ## Constraints
 
@@ -46,7 +46,7 @@ I worked on this as an ML engineer at RideOnTrack from January to August 2025, o
 <line x1="550" y1="206" x2="680" y2="206" stroke="#6b7280" marker-end="url(#rail-arrow)"></line>
 </svg></div>
 
-- **Anomaly detection on railway tracks** using machine learning.
+- **Anomaly detection on railway tracks** using machine learning and computer vision.
 - **A U-Net segmentation model and an autoencoder** that isolate the critical areas of each track image, which improves detection.
 - **YOLOv8 for real-time train signal recognition**, which reached 91% accuracy.
 

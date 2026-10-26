@@ -4,7 +4,7 @@ stack: PostgreSQL & Supabase & n8n
 pageSlug: ghazeline-shop
 date: 2026-01-01T00:00:00+00:00
 order: 1
-description: Data and AI work on a live online store. The PostgreSQL / Supabase data model, order summary automation, an n8n agent for Instagram replies and the backend features in between.
+description: Data and AI work on a live online store with 30+ products. The PostgreSQL / Supabase data model, order summary automation, an n8n agent that answers 50–100 Instagram messages a day and the backend features in between.
 liveUrl: https://ghazeline.com
 repoLabel: Private repository, client work
 flow: ["Orders", "Supabase", "Order sheets"]
@@ -16,14 +16,14 @@ flow: ["Orders", "Supabase", "Order sheets"]
 
 Selling online in Algeria doesn't work the way it does in Europe. Card payments are rare, so effectively everything is cash on delivery. Shipping runs through private carriers with per-wilaya tariffs. And most sellers operate their entire business out of an Instagram DM inbox.
 
-Ghazeline is a ready-to-wear brand. Its store went live in January 2026 and I have worked on it since as the data and AI engineer. The shop is small to mid-sized, so the role also covered the backend work the data depended on.
+Ghazeline is a ready-to-wear brand. Its store went live in January 2026 and I have worked on it since as the data and AI engineer. The shop has 30+ products and gets 50–100 Instagram messages a day. It is a small team, so the role also covered the backend work the data depended on.
 
 ## What I did
 
 - Designed the PostgreSQL / Supabase data model: products, variants, categories, stock and orders.
 - Built backend features that collect data into that model.
-- Automated the creation of order summary sheets.
-- Deployed an AI agent on n8n that replies to Instagram messages.
+- Automated the creation of order summary sheets and cash-on-delivery confirmation.
+- Deployed an AI agent on n8n that answers the 50–100 customer messages the store gets on Instagram each day, so the team only steps in for complex requests.
 - Maintain the store: fixes and new features from business feedback, and monitoring of the data flows.
 
 ## Constraints

@@ -20,13 +20,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <p class="text-accent text-sm">January 2026 – present</p>
     <p class="text-accent text-sm mb-2">Freelance, ghazeline.com</p>
     <p class="text-muted text-sm mb-3">
-      Online store of a ready-to-wear fashion brand.
+      Online store of a ready-to-wear fashion brand with 30+ products.
     </p>
     <ul class="teal-bullets space-y-1 text-fg2 text-sm mb-3">
       <li>Designed the PostgreSQL / Supabase data model: products, variants, categories, stock and orders.</li>
+      <li>Deployed an AI agent on n8n that answers the store's 50–100 daily Instagram customer messages, so the team only steps in for complex requests.</li>
       <li>Built backend features for data collection that feed the data model.</li>
-      <li>Automated the creation of order summary sheets.</li>
-      <li>Deployed an AI agent on n8n that automates replies on Instagram.</li>
+      <li>Automated order summary sheets and cash-on-delivery confirmation.</li>
       <li>Maintain the store: fixes and new features from business feedback, and monitoring of the data flows.</li>
     </ul>
     <p class="text-muted text-xs font-display mb-2">
@@ -37,23 +37,26 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </a>
   </div>
 
-  <!-- RideOnTrack -->
+  <!-- Infrabel -->
   <div class="mb-10">
     <div class="flex items-center mb-2 gap-3">
       <div class="w-8 h-8 flex-shrink-0 flex items-center justify-center">
         <CpuChipIcon className="w-7 h-7 text-accent" />
       </div>
-      <h2 class="text-xl font-display font-bold">ML Engineer, RideOnTrack (Infrabel project)</h2>
+      <h2 class="text-xl font-display font-bold">ML Engineer, Infrabel (RideOnTrack project)</h2>
     </div>
     <p class="text-accent text-sm mb-3">January 2025 – August 2025</p>
     <ul class="teal-bullets space-y-1 text-fg2 text-sm mb-3">
-      <li>Developed an anomaly detection system for Belgian railway tracks using machine learning.</li>
+      <li>Developed an anomaly detection system for Belgian railway tracks using machine learning and computer vision.</li>
       <li>Implemented a U-Net segmentation model and an autoencoder to isolate critical areas and improve detection.</li>
       <li>Integrated YOLOv8 for real-time train signal recognition, reaching 91% accuracy.</li>
     </ul>
     <p class="text-muted text-xs font-display">
       <span class="text-fg2">Stack:</span> Python, TensorFlow, U-Net, YOLOv8, AWS SageMaker, Git
     </p>
+    <a href={`${base}/projects/railway-anomaly-detection`} class="text-accent text-sm font-display hover:underline">
+      Read the write-up
+    </a>
   </div>
 
   <!-- Algorhythm: GenAI -->
@@ -66,11 +69,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <ul class="teal-bullets space-y-1 text-fg2 text-sm mb-3">
       <li>Developed AI workflows on Vertex AI and BigQuery to automate internal tasks with a consistent, specialised tone.</li>
       <li>Built a RAG agent that retrieves internal BigQuery data for accurate, context-aware answers.</li>
-      <li>Integrated the agent into HubSpot to support internal communication and automate repetitive queries.</li>
+      <li>Integrated the agent into HubSpot, available to about 50 employees, to support internal communication and automate repetitive queries.</li>
     </ul>
-    <p class="text-muted text-xs font-display">
+    <p class="text-muted text-xs font-display mb-2">
       <span class="text-fg2">Stack:</span> Vertex AI, BigQuery, HubSpot
     </p>
+    <a href={`${base}/projects/rag-agent-hubspot`} class="text-accent text-sm font-display hover:underline">
+      Read the write-up
+    </a>
   </div>
 
   <!-- Algorhythm: internship -->
